@@ -64,10 +64,13 @@ export const loadDomain = async () => {
                         .includes(randomCountry.name.common)
                 ) {
                     incrementScore(); // 增加分数
-                    loadDomain(); // 加载下一题
                 } else {
-                    alert('错误！请再试一次。');
+                    alert(
+                        `Incorrect! The correct answer was ${randomCountry.name.common}.`
+                    );
+                    resetScore();
                 }
+                loadDomain(); // 加载下一题
             });
         });
     } catch (error) {

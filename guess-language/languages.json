@@ -1,0 +1,541 @@
+[
+    {
+        "name": "English",
+        "chineseName": "英语",
+        "options": [
+            "Hello, how are you?",
+            "Hi, what's up?",
+            "Good morning!",
+            "How are things?",
+            "Hey there!"
+        ]
+    },
+    {
+        "name": "Spanish",
+        "chineseName": "西班牙语",
+        "options": [
+            "Hola, ¿cómo estás?",
+            "¿Qué tal?",
+            "¡Buenos días!",
+            "¿Cómo te va?",
+            "¿Qué hay?"
+        ]
+    },
+    {
+        "name": "French",
+        "chineseName": "法语",
+        "options": [
+            "Bonjour, comment ça va?",
+            "Salut, ça va?",
+            "Coucou, ça va?",
+            "Bonjour, comment vas-tu?",
+            "Salut, comment tu vas?"
+        ]
+    },
+    {
+        "name": "German",
+        "chineseName": "德语",
+        "options": [
+            "Hallo, wie geht's?",
+            "Guten Morgen!",
+            "Wie läuft's?",
+            "Wie geht es dir?",
+            "Servus!"
+        ]
+    },
+    {
+        "name": "Chinese",
+        "chineseName": "中文",
+        "options": [
+            "你好，你怎么样？",
+            "嗨，你好吗？",
+            "早上好！",
+            "你过得怎么样？",
+            "嘿，你好！"
+        ]
+    },
+    {
+        "name": "Japanese",
+        "chineseName": "日语",
+        "options": [
+            "こんにちは、お元気ですか？",
+            "やあ、どう？",
+            "おはようございます！",
+            "調子はどう？",
+            "やっほー！"
+        ]
+    },
+    {
+        "name": "Russian",
+        "chineseName": "俄语",
+        "options": [
+            "Привет, как дела?",
+            "Здравствуйте, как вы?",
+            "Привет, как ты?",
+            "Добрый день!",
+            "Привет, как настроение?"
+        ]
+    },
+    {
+        "name": "Arabic",
+        "chineseName": "阿拉伯语",
+        "options": [
+            "مرحبا كيف حالك؟",
+            "اهلا كيفك؟",
+            "صباح الخير!",
+            "كيفك اليوم؟",
+            "مرحبا!"
+        ]
+    },
+    {
+        "name": "Portuguese",
+        "chineseName": "葡萄牙语",
+        "options": [
+            "Olá, como você está?",
+            "Oi, tudo bem?",
+            "Bom dia!",
+            "Como vai você?",
+            "E aí?"
+        ]
+    },
+    {
+        "name": "Italian",
+        "chineseName": "意大利语",
+        "options": [
+            "Ciao, come stai?",
+            "Salve, tutto bene?",
+            "Buongiorno!",
+            "Come va?",
+            "Ehi, come va?"
+        ]
+    },
+    {
+        "name": "Korean",
+        "chineseName": "韩语",
+        "options": [
+            "안녕하세요, 어떻게 지내세요?",
+            "안녕, 잘 지내?",
+            "좋은 아침!",
+            "어떻게 지내세요?",
+            "안녕!"
+        ]
+    },
+    {
+        "name": "Hindi",
+        "chineseName": "印地语",
+        "options": [
+            "नमस्ते, आप कैसे हैं?",
+            "नमस्ते, क्या हाल है?",
+            "सुप्रभात!",
+            "आप कैसे हो?",
+            "नमस्कार!"
+        ]
+    },
+    {
+        "name": "Turkish",
+        "chineseName": "土耳其语",
+        "options": [
+            "Merhaba, nasılsın?",
+            "Selam, ne haber?",
+            "Günaydın!",
+            "Nasılsın?",
+            "Merhaba, ne var ne yok?"
+        ]
+    },
+    {
+        "name": "Swedish",
+        "chineseName": "瑞典语",
+        "options": [
+            "Hej, hur mår du?",
+            "Hej, hur är läget?",
+            "God morgon!",
+            "Hur är det?",
+            "Hej där!"
+        ]
+    },
+    {
+        "name": "Dutch",
+        "chineseName": "荷兰语",
+        "options": [
+            "Hallo, hoe gaat het?",
+            "Hoi, alles goed?",
+            "Goedemorgen!",
+            "Hoe is het?",
+            "Hey, hoe gaat het?"
+        ]
+    },
+    {
+        "name": "Greek",
+        "chineseName": "希腊语",
+        "options": [
+            "Γεια σου, πώς είσαι?",
+            "Γεια, τι κάνεις?",
+            "Καλημέρα!",
+            "Πώς πάει?",
+            "Γεια σου!"
+        ]
+    },
+    {
+        "name": "Polish",
+        "chineseName": "波兰语",
+        "options": [
+            "Cześć, jak się masz?",
+            "Hej, co słychać?",
+            "Dzień dobry!",
+            "Jak leci?",
+            "Siema!"
+        ]
+    },
+    {
+        "name": "Finnish",
+        "chineseName": "芬兰语",
+        "options": [
+            "Hei, mitä kuuluu?",
+            "Moi, mitä kuuluu?",
+            "Hyvää huomenta!",
+            "Miten menee?",
+            "Hei vaan!"
+        ]
+    },
+    {
+        "name": "Thai",
+        "chineseName": "泰语",
+        "options": [
+            "สวัสดี, คุณเป็นอย่างไร?",
+            "หวัดดี, สบายดีไหม?",
+            "สวัสดีตอนเช้า!",
+            "เป็นอย่างไรบ้าง?",
+            "สวัสดีครับ/ค่ะ!"
+        ]
+    },
+    {
+        "name": "Vietnamese",
+        "chineseName": "越南语",
+        "options": [
+            "Xin chào, bạn có khỏe không?",
+            "Chào, bạn thế nào?",
+            "Chào buổi sáng!",
+            "Bạn có ổn không?",
+            "Xin chào!"
+        ]
+    },
+    {
+        "name": "Hebrew",
+        "chineseName": "希伯来语",
+        "options": [
+            "שלום, איך אתה?",
+            "היי, מה נשמע?",
+            "בוקר טוב!",
+            "מה שלומך?",
+            "היי שם!"
+        ]
+    },
+    {
+        "name": "Hungarian",
+        "chineseName": "匈牙利语",
+        "options": [
+            "Szia, hogy vagy?",
+            "Helló, hogy vagy?",
+            "Jó reggelt!",
+            "Hogy megy?",
+            "Helló!"
+        ]
+    },
+    {
+        "name": "Danish",
+        "chineseName": "丹麦语",
+        "options": [
+            "Hej, hvordan har du det?",
+            "Hej, hvad så?",
+            "Godmorgen!",
+            "Hvordan går det?",
+            "Hej hej!"
+        ]
+    },
+    {
+        "name": "Norwegian",
+        "chineseName": "挪威语",
+        "options": [
+            "Hei, hvordan har du det?",
+            "Hei, hva skjer?",
+            "God morgen!",
+            "Hvordan går det?",
+            "Hei der!"
+        ]
+    },
+    {
+        "name": "Czech",
+        "chineseName": "捷克语",
+        "options": [
+            "Ahoj, jak se máš?",
+            "Čau, co je nového?",
+            "Dobré ráno!",
+            "Jak to jde?",
+            "Nazdar!"
+        ]
+    },
+    {
+        "name": "Romanian",
+        "chineseName": "罗马尼亚语",
+        "options": [
+            "Salut, ce mai faci?",
+            "Bună, ce faci?",
+            "Bună dimineața!",
+            "Cum îți merge?",
+            "Salut!"
+        ]
+    },
+    {
+        "name": "Indonesian",
+        "chineseName": "印尼语",
+        "options": [
+            "Halo, apa kabar?",
+            "Hai, bagaimana kabarmu?",
+            "Selamat pagi!",
+            "Bagaimana kabarmu?",
+            "Hai!"
+        ]
+    },
+    {
+        "name": "Malay",
+        "chineseName": "马来语",
+        "options": [
+            "Hai, apa khabar?",
+            "Hai, apa cerita?",
+            "Selamat pagi!",
+            "Apa khabar?",
+            "Hai di sana!"
+        ]
+    },
+    {
+        "name": "Ukrainian",
+        "chineseName": "乌克兰语",
+        "options": [
+            "Привіт, як ти?",
+            "Привіт, як справи?",
+            "Доброго ранку!",
+            "Як справи?",
+            "Привіт!"
+        ]
+    },
+    {
+        "name": "Bulgarian",
+        "chineseName": "保加利亚语",
+        "options": [
+            "Здравей, как си?",
+            "Здрасти, какво става?",
+            "Добро утро!",
+            "Как върви?",
+            "Здравейте!"
+        ]
+    },
+    {
+        "name": "Croatian",
+        "chineseName": "克罗地亚语",
+        "options": [
+            "Bok, kako si?",
+            "Ćao, kako ide?",
+            "Dobro jutro!",
+            "Kako ide?",
+            "Bok!"
+        ]
+    },
+    {
+        "name": "Serbian",
+        "chineseName": "塞尔维亚语",
+        "options": [
+            "Здраво, како си?",
+            "Ћао, шта има?",
+            "Добро јутро!",
+            "Како иде?",
+            "Здраво!"
+        ]
+    },
+    {
+        "name": "Slovak",
+        "chineseName": "斯洛伐克语",
+        "options": [
+            "Ahoj, ako sa máš?",
+            "Čau, čo nové?",
+            "Dobré ráno!",
+            "Ako sa máš?",
+            "Ahoj!"
+        ]
+    },
+    {
+        "name": "Slovenian",
+        "chineseName": "斯洛文尼亚语",
+        "options": [
+            "Živjo, kako si?",
+            "Živjo, kaj dogaja?",
+            "Dobro jutro!",
+            "Kako gre?",
+            "Živjo!"
+        ]
+    },
+    {
+        "name": "Latvian",
+        "chineseName": "拉脱维亚语",
+        "options": [
+            "Sveiki, kā tev klājas?",
+            "Čau, kas jauns?",
+            "Labrīt!",
+            "Kā tev iet?",
+            "Sveiks!"
+        ]
+    },
+    {
+        "name": "Lithuanian",
+        "chineseName": "立陶宛语",
+        "options": [
+            "Labas, kaip laikaisi?",
+            "Sveiki, kas naujo?",
+            "Labas rytas!",
+            "Kaip sekasi?",
+            "Sveikas!"
+        ]
+    },
+    {
+        "name": "Estonian",
+        "chineseName": "爱沙尼亚语",
+        "options": [
+            "Tere, kuidas sul läheb?",
+            "Hei, mis uudist?",
+            "Tere hommikust!",
+            "Kuidas läheb?",
+            "Tere!"
+        ]
+    },
+    {
+        "name": "Maltese",
+        "chineseName": "马耳他语",
+        "options": [
+            "Bongu, kif int?",
+            "Ħej, x'hemm?",
+            "Bonġu!",
+            "Kif sejjer?",
+            "Ħej!"
+        ]
+    },
+    {
+        "name": "Georgian",
+        "chineseName": "格鲁吉亚语",
+        "options": [
+            "გამარჯობა, როგორ ხარ?",
+            "გამარჯობა, რა ხდება?",
+            "დილა მშვიდობისა!",
+            "როგორ მიდის?",
+            "გამარჯობა!"
+        ]
+    },
+    {
+        "name": "Armenian",
+        "chineseName": "亚美尼亚语",
+        "options": [
+            "Բարև, ինչպե՞ս ես?",
+            "Բարև, ինչ կա նոր?",
+            "Բարի առավոտ!",
+            "Ինչպես ես?",
+            "Բարև!"
+        ]
+    },
+    {
+        "name": "Azerbaijani",
+        "chineseName": "阿塞拜疆语",
+        "options": [
+            "Salam, necəsən?",
+            "Salam, nə var nə yox?",
+            "Sabahınız xeyir!",
+            "Necə gedir?",
+            "Salam!"
+        ]
+    },
+    {
+        "name": "Kazakh",
+        "chineseName": "哈萨克语",
+        "options": [
+            "Сәлем, қалайсың?",
+            "Сәлем, не жаңалық?",
+            "Қайырлы таң!",
+            "Қалайсың?",
+            "Сәлем!"
+        ]
+    },
+    {
+        "name": "Uzbek",
+        "chineseName": "乌兹别克语",
+        "options": [
+            "Salom, qalaysan?",
+            "Salom, nima yangiliklar?",
+            "Xayrli tong!",
+            "Qanday?",
+            "Salom!"
+        ]
+    },
+    {
+        "name": "Mongolian",
+        "chineseName": "蒙古语",
+        "options": [
+            "Сайн байна уу, та хэрхэн байна?",
+            "Сайн уу, юу байна?",
+            "Өглөөний мэнд!",
+            "Хэрхэн байна?",
+            "Сайн уу!"
+        ]
+    },
+    {
+        "name": "Khmer",
+        "chineseName": "高棉语",
+        "options": [
+            "សួស្តី, អ្នកសុខសប្បាយជាទេ?",
+            "សួស្តី, តើមានអ្វីថ្មី?",
+            "អរុណសួស្តី!",
+            "អ្នកមានសុខសប្បាយទេ?",
+            "សួស្តី!"
+        ]
+    },
+    {
+        "name": "Lao",
+        "chineseName": "老挝语",
+        "options": [
+            "ສະບາຍດີ, ເຈົ້າເປັນແນວໃດ?",
+            "ສະບາຍດີ, ມີຫຍັງໃໝ່?",
+            "ສະບາຍດີຕອນເຊົ້າ!",
+            "ເຈົ້າມີສຸຂສະບາຍດີບໍ?",
+            "ສະບາຍດີ!"
+        ]
+    },
+    {
+        "name": "Sinhala",
+        "chineseName": "僧伽罗语",
+        "options": [
+            "ආයුබෝවන්, ඔබට කෙසේද?",
+            "ආයුබෝවන්, මොකක්ද?",
+            "සුභ උදෑසනක්!",
+            "ඔබට කොහොමද?",
+            "ආයුබෝවන්!"
+        ]
+    },
+    {
+        "name": "Pashto",
+        "chineseName": "普什图语",
+        "options": [
+            "سلام، ته څنګه یې؟",
+            "سلام، څه خبرونه دي؟",
+            "سهار مو پخير!",
+            "څنګه يې؟",
+            "سلام!"
+        ]
+    },
+    {
+        "name": "Ukrainian",
+        "chineseName": "乌克兰语",
+        "options": [
+            "Привіт, як ти?",
+            "Привіт, що нового?",
+            "Доброго ранку!",
+            "Як справи?",
+            "Привіт!"
+        ]
+    }
+]

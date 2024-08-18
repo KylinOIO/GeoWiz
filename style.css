@@ -51,17 +51,19 @@ body {
 }
 
 #flag-container {
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 30px auto;
-    width: 320px;
-    height: 220px;
+    width: 330px;
+    height: 230px;
     border-radius: 12px;
     background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: none;
 }
 
 #flag-container h2 {
+    height: 220px;
     color: #2f2f2f; /* 设置字体颜色为黑色 */
     font-size: 150px; /* 将字体大小放大 */
     margin: 0; /* 去除默认的外边距 */
@@ -103,7 +105,7 @@ body {
 #back-button {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 20px;
     padding: 10px 20px;
     background-color: #ef2409;
     color: white;

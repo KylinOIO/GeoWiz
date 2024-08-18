@@ -11,7 +11,6 @@ export const loadFlag = async () => {
 
     const flagContainer = document.getElementById('flag-container');
     const optionsContainer = document.getElementById('options-container');
-    const scoreContainer = document.getElementById('score-container');
 
     flagContainer.innerHTML = `<img src="${randomCountry.flags.png}" alt="Flag of ${randomCountry.name.common}" width="300" height="200">`;
 
@@ -33,14 +32,19 @@ export const loadFlag = async () => {
                 incrementScore();
                 loadFlag(); // 加载下一轮的国家旗帜
             } else {
-                alert('错误！请再试一次。');
+                alert(`错误！正确答案是：${randomCountry.name.common}`);
+                resetScore(); // 分数清零
+                loadFlag(); // 刷新题目
             }
         });
     });
 };
 
-// 在页面加载时调用 loadFlag 函数
-loadFlag();
+// 在页面加载时调用 loadFlag 函数并重置分数
+window.addEventListener('load', () => {
+    resetScore();
+    loadFlag();
+});
 
 // 从所有国家列表中随机选择指定数量的不重复国家作为错误选项
 const getRandomOptions = (countries, num) => {
@@ -54,15 +58,3 @@ const getRandomOptions = (countries, num) => {
     }
     return selectedOptions;
 };
-
-// 更新页面上的分数显示
-const updateScoreDisplay = () => {
-    const scoreContainer = document.getElementById('score-container');
-    scoreContainer.textContent = `当前得分: ${score}`;
-};
-
-// 在页面加载时调用 loadFlag 函数并重置分数
-window.addEventListener('load', () => {
-    resetScore();
-    loadFlag();
-});

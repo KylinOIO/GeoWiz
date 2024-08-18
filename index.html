@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- 指定文档的字符编码为UTF-8 -->
         <meta charset="UTF-8" />
-        <!-- 视口设置，确保页面在移动设备上能够自适应 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- 网页标题，会显示在浏览器标签上 -->
         <title>Geowiz</title>
-        <!-- 链接到外部CSS文件，用于页面的样式设置 -->
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <!-- 应用的主要容器 -->
         <div id="app">
-            <!-- 欢迎消息，显示在用户进入页面时 -->
             <div id="welcome-message">你好，欢迎回来</div>
 
-            <!-- 模式选择按钮的容器 -->
             <div id="mode-container">
-                <!-- 猜顶级域名的按钮 -->
-                <button id="guess-domain">猜顶级域名</button><br />
-                <!-- 猜国旗的按钮 -->
-                <button id="guess-flag">猜国旗</button><br />
-                <!-- 猜语言的按钮 -->
-                <button id="guess-language">猜语言</button>
-            </div>
-
-            <!-- 用于显示国旗或顶级域名的容器，初始状态为隐藏 -->
-            <div id="flag-domain-container" class="hidden">
-                <!-- 用于显示国旗的容器 -->
-                <div id="flag-container"></div>
-                <!-- 用于显示语言的容器 -->
-                <div id="language-container"></div>
-                <!-- 用于显示选项的容器 -->
-                <div id="options-container"></div>
-                <!-- 显示分数的容器 -->
-                <div id="score-container">Score: 0</div>
-                <!-- 返回按钮，初始状态为隐藏 -->
-                <button id="back-button" class="hidden">返回</button>
+                <a href="./guess-domain/index.html">
+                    <button id="guess-domain">猜顶级域名</button> </a
+                ><br />
+                <a href="./guess-flag/index.html">
+                    <button id="guess-flag">猜国旗</button> </a
+                ><br />
+                <a href="./guess-language/index.html">
+                    <button id="guess-language">猜语言</button>
+                </a>
             </div>
         </div>
-
-        <!-- 引入模块化的JavaScript文件 -->
-        <script type="module" src="./mode-selection.js"></script>
-        <!-- 引入猜顶级域名的模块 -->
-        <script type="module" src="./guess-domain/guess-domain.js"></script>
-        <!-- 引入猜国旗的模块 -->
-        <script type="module" src="./guess-flag/guess-flag.js"></script>
-        <!-- 引入猜语言的模块 -->
-        <script type="module" src="./guess-language/guess-language.js"></script>
     </body>
 </html>

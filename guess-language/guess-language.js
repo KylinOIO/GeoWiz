@@ -1,65 +1,93 @@
 import { incrementScore, resetScore } from '../utils.js';
 
-// 从语言列表中随机选择n个不同的语言选项
-const getRandomOptions = (languages, n) => {
-    const options = [];
-    while (options.length < n) {
+let languages = [];
+let currentQuestionIndex = 0;
+let score = 0;
+
+const questionElement = document.getElementById('question');
+const optionsContainer = document.getElementById('options-container');
+const scoreElement = document.getElementById('score-container');
+
+// 动态加载语言数据
+async function loadLanguages() {
+    try {
+        const response = await fetch('languages.json');
+        languages = await response.json();
+        init(); // 在数据加载完成后初始化游戏
+    } catch (error) {
+        console.error('加载语言数据时出错:', error);
+    }
+}
+
+function generateQuestion() {
+    currentQuestionIndex = Math.floor(Math.random() * languages.length);
+    const correctLanguage = languages[currentQuestionIndex];
+
+    // 随机选择一个句子作为题目
+    const sentence =
+        correctLanguage.options[
+            Math.floor(Math.random() * correctLanguage.options.length)
+        ];
+    questionElement.textContent = sentence;
+
+    let options = [correctLanguage];
+    while (options.length < 4) {
         const randomLanguage =
             languages[Math.floor(Math.random() * languages.length)];
-        // 确保不重复添加语言
         if (!options.includes(randomLanguage)) {
             options.push(randomLanguage);
         }
     }
-    return options;
-};
 
-// 初始化猜语言模式的内容
-export const loadLanguage = async () => {
-    try {
-        // 从API获取所有国家数据
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        const countries = await response.json();
+    options = shuffleArray(options);
 
-        // 随机选择一个国家
-        const randomCountry =
-            countries[Math.floor(Math.random() * countries.length)];
+    // 动态生成选项按钮
+    optionsContainer.innerHTML = options
+        .map(
+            (option) =>
+                `<button class="option-button">${option.chineseName}<br>${option.name}</button>`
+        )
+        .join('');
 
-        // 获取该国家的官方语言
-        const countryLanguages = Object.values(randomCountry.languages);
-
-        // 随机选择一句话（假设每个国家数据中有一个sampleSentence字段，包含示例句子）
-        const sampleSentence =
-            randomCountry.sampleSentence || 'This is a sample sentence';
-
-        // 获取四个随机语言选项，其中一个是正确答案
-        const options = getRandomOptions(countryLanguages, 1);
-        const wrongOptions = getRandomOptions(
-            countries.flatMap((c) => Object.values(c.languages)),
-            3
+    const optionButtons = document.querySelectorAll('.option-button');
+    optionButtons.forEach((button, index) => {
+        button.addEventListener('click', () =>
+            checkAnswer(options[index].name)
         );
-        const finalOptions = [...options, ...wrongOptions].sort(
-            () => Math.random() - 0.5
-        );
+    });
+}
 
-        // 显示题目和选项
-        document.getElementById(
-            'question'
-        ).innerText = `Which language is this: "${sampleSentence}"?`;
-        finalOptions.forEach((language, index) => {
-            document.getElementById(`option${index + 1}`).innerText = language;
-            document.getElementById(`option${index + 1}`).onclick = () => {
-                if (language === options[0]) {
-                    incrementScore();
-                    alert('Correct!');
-                } else {
-                    resetScore();
-                    alert('Wrong!');
-                }
-                loadLanguage(); // 加载下一个问题
-            };
-        });
-    } catch (error) {
-        console.error('Error loading language data:', error);
+function checkAnswer(selectedOption) {
+    const correctAnswer = languages[currentQuestionIndex].name;
+    if (selectedOption === correctAnswer) {
+        incrementScore();
+        score++;
+    } else {
+        alert(`错误！正确答案是 ${correctAnswer}。`);
+        resetScore();
+        score = 0;
     }
-};
+    updateScore();
+    generateQuestion();
+}
+
+function updateScore() {
+    scoreElement.textContent = `Score: ${score}`;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+function init() {
+    resetScore();
+    score = 0;
+    updateScore();
+    generateQuestion();
+}
+
+window.onload = loadLanguages;

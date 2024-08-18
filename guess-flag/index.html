@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>猜国旗</title>
+        <!-- 引入通用的CSS样式文件 -->
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <!-- 主应用容器 -->
+        <div id="app">
+            <div id="flag-domain-container">
+                <!-- 国旗容器，显示需要猜的国旗图片 -->
+                <div id="flag-container"></div>
+
+                <!-- 选项容器，显示可能的国家选项 -->
+                <div id="options-container"></div>
+
+                <!-- 分数容器，显示当前得分 -->
+                <div id="score-container">Score: 0</div>
+
+                <!-- 返回按钮，返回到模式选择页面 -->
+                <a href="../index.html">
+                    <button id="back-button">返回</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 引入猜国旗模式的JS逻辑文件 -->
+        <script type="module" src="guess-flag.js"></script>
+    </body>
+</html>

@@ -4,32 +4,45 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>猜语言</title>
-        <!-- 引入通用的CSS样式文件 -->
         <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
+        <!-- 新增 logo 的代码开始 -->
+        <div id="logo-container">
+            <a href="../index.html">
+                <img
+                    src="../assets/images/common/geowiz-logo.png"
+                    alt="Geowiz Logo"
+                    id="logo"
+                />
+            </a>
+        </div>
+        <!-- 新增 logo 的代码结束 -->
+
         <!-- 主应用容器 -->
         <div id="app">
-            <div id="language-container">
-                <!-- 句子容器，显示需要猜测语言的句子 -->
+            <!-- 开始界面 -->
+            <div id="start-screen">
+                <h1>猜语言模式</h1>
+                <button id="start-button">开始游戏</button>
+            </div>
+
+            <!-- 游戏界面，默认隐藏 -->
+            <div id="language-container" style="display: none">
                 <div id="sentence-container">
                     <p id="question"></p>
                 </div>
 
-                <!-- 选项容器，按钮将由JS动态生成 -->
                 <div id="options-container"></div>
 
-                <!-- 分数容器，显示当前得分 -->
                 <div id="score-container">Score: 0</div>
 
-                <!-- 返回按钮，返回到模式选择页面 -->
-                <a href="../index.html">
+                <a href="#">
                     <button id="back-button">返回</button>
                 </a>
             </div>
         </div>
 
-        <!-- 引入猜语言模式的JS逻辑文件 -->
         <script type="module" src="guess-language.js"></script>
     </body>
 </html>

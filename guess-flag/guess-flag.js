@@ -1,9 +1,7 @@
-// guess-flag.js
-
 import { incrementScore, resetScore } from '../utils.js';
 
 // 初始化猜国家模式的内容
-export const loadFlag = async () => {
+const loadFlag = async () => {
     const response = await fetch('https://restcountries.com/v3.1/all');
     const countries = await response.json();
     const randomCountry =
@@ -40,10 +38,25 @@ export const loadFlag = async () => {
     });
 };
 
-// 在页面加载时调用 loadFlag 函数并重置分数
+// 在页面加载时设置开始游戏逻辑
 window.addEventListener('load', () => {
-    resetScore();
-    loadFlag();
+    const startButton = document.getElementById('start-button');
+    const startScreen = document.getElementById('start-screen');
+    const gameScreen = document.getElementById('game-screen');
+    const backButton = document.getElementById('back-button');
+
+    startButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        gameScreen.style.display = 'block';
+        resetScore();
+        loadFlag();
+    });
+
+    backButton.addEventListener('click', () => {
+        gameScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+        resetScore(); // 点击返回时分数清零
+    });
 });
 
 // 从所有国家列表中随机选择指定数量的不重复国家作为错误选项

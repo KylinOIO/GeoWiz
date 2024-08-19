@@ -1,4 +1,3 @@
-// guess-domain.js
 import { incrementScore, resetScore } from '../utils.js';
 
 // 从国家列表中随机选择n个不同的国家
@@ -65,9 +64,7 @@ export const loadDomain = async () => {
                 ) {
                     incrementScore(); // 增加分数
                 } else {
-                    alert(
-                        `Incorrect! The correct answer was ${randomCountry.name.common}.`
-                    );
+                    alert(`错误！正确答案是 ${randomCountry.name.common}.`);
                     resetScore();
                 }
                 loadDomain(); // 加载下一题
@@ -78,5 +75,23 @@ export const loadDomain = async () => {
     }
 };
 
-// 在页面加载时调用 loadDomain 函数
-loadDomain();
+// 在页面加载时设置开始游戏逻辑
+window.addEventListener('load', () => {
+    const startButton = document.getElementById('start-button');
+    const startScreen = document.getElementById('start-screen');
+    const gameScreen = document.getElementById('game-screen');
+    const backButton = document.getElementById('back-button');
+
+    startButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        gameScreen.style.display = 'block';
+        resetScore();
+        loadDomain();
+    });
+
+    backButton.addEventListener('click', () => {
+        gameScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+        resetScore(); // 点击返回时分数清零
+    });
+});

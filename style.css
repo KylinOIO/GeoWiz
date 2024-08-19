@@ -102,10 +102,19 @@ body {
     margin-top: 20px;
 }
 
+#question {
+    font-size: 40px; /* 增大字体 */
+    font-weight: bold; /* 使字体加粗 */
+    text-align: center; /* 让题目居中显示 */
+    margin: 20px 0; /* 增加上下间距 */
+    color: #ffffff; /* 设置字体颜色 */
+    font-family: 'Arial', sans-serif; /* 设置字体 */
+}
+
 #back-button {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     padding: 10px 20px;
     background-color: #ef2409;
     color: white;
@@ -117,4 +126,35 @@ body {
 
 #back-button:hover {
     background-color: #d90404;
+}
+
+#start-button {
+    background-color: #446ddf; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    padding: 15px 32px; /* 内边距，控制按钮大小 */
+    text-align: center; /* 文字居中对齐 */
+    text-decoration: none; /* 移除文字装饰 */
+    display: inline-block; /* 使按钮可以与其他元素并排 */
+    font-size: 16px; /* 文字大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+    border: none; /* 移除边框 */
+    border-radius: 8px; /* 设置按钮圆角 */
+    transition: background-color 0.3s ease; /* 背景颜色的过渡效果 */
+}
+
+#start-button:hover {
+    background-color: #213bb1; /* 鼠标悬停时背景颜色 */
+}
+
+#logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#logo {
+    width: 250px; /* 根据需要调整logo的大小 */
+    height: auto;
+    cursor: pointer;
 }

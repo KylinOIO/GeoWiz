@@ -8,12 +8,16 @@ const questionElement = document.getElementById('question');
 const optionsContainer = document.getElementById('options-container');
 const scoreElement = document.getElementById('score-container');
 
+// 新增：开始界面和按钮的DOM元素
+const startScreen = document.getElementById('start-screen');
+const startButton = document.getElementById('start-button');
+const languageContainer = document.getElementById('language-container');
+
 // 动态加载语言数据
 async function loadLanguages() {
     try {
         const response = await fetch('languages.json');
         languages = await response.json();
-        init(); // 在数据加载完成后初始化游戏
     } catch (error) {
         console.error('加载语言数据时出错:', error);
     }
@@ -23,12 +27,11 @@ function generateQuestion() {
     currentQuestionIndex = Math.floor(Math.random() * languages.length);
     const correctLanguage = languages[currentQuestionIndex];
 
-    // 随机选择一个句子作为题目
     const sentence =
         correctLanguage.options[
             Math.floor(Math.random() * correctLanguage.options.length)
         ];
-    questionElement.textContent = sentence;
+    questionElement.textContent = `“${sentence}”`;
 
     let options = [correctLanguage];
     while (options.length < 4) {
@@ -41,7 +44,6 @@ function generateQuestion() {
 
     options = shuffleArray(options);
 
-    // 动态生成选项按钮
     optionsContainer.innerHTML = options
         .map(
             (option) =>
@@ -90,4 +92,28 @@ function init() {
     generateQuestion();
 }
 
+// 新增：开始游戏函数，显示游戏界面并初始化游戏
+function startGame() {
+    startScreen.style.display = 'none';
+    languageContainer.style.display = 'block';
+    init();
+}
+
+// 新增：返回到开始界面并重置游戏
+function returnToStartScreen() {
+    languageContainer.style.display = 'none';
+    startScreen.style.display = 'block';
+    resetScore(); // 重置分数
+    score = 0; // 确保分数归零
+    updateScore(); // 更新分数显示
+}
+
+// 给“开始游戏”按钮绑定点击事件
+startButton.addEventListener('click', startGame);
+
+// 新增：给返回按钮绑定点击事件
+const backButton = document.getElementById('back-button');
+backButton.addEventListener('click', returnToStartScreen);
+
+// 加载语言数据
 window.onload = loadLanguages;

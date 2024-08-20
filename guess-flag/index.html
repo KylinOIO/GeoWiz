@@ -25,6 +25,34 @@
             <!-- 添加开始界面 -->
             <div id="start-screen">
                 <h1>猜国旗模式</h1>
+
+                <!-- 模式选择部分 -->
+                <div id="mode-selection">
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="all"
+                            checked
+                        />
+                        全部模式
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="geoguessr"
+                        />
+                        GeoGuessr/图寻模式
+                        <span class="tooltip-container">
+                            <span class="tooltip">?</span>
+                            <span class="tooltip-text"
+                                >仅包含谷歌官方街景覆盖国家和地区</span
+                            >
+                        </span>
+                    </label>
+                </div>
+
                 <button id="start-button">开始游戏</button>
             </div>
 

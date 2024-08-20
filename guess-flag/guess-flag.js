@@ -1,9 +1,15 @@
 import { incrementScore, resetScore } from '../utils.js';
+import { getAllCountries, getGeoguessrCountries } from '../countries.js';
 
-// 初始化猜国家模式的内容
-const loadFlag = async () => {
-    const response = await fetch('https://restcountries.com/v3.1/all');
-    const countries = await response.json();
+const loadFlag = async (mode) => {
+    let countries;
+
+    if (mode === 'geoguessr') {
+        countries = await getGeoguessrCountries();
+    } else {
+        countries = await getAllCountries();
+    }
+
     const randomCountry =
         countries[Math.floor(Math.random() * countries.length)];
 
@@ -28,17 +34,16 @@ const loadFlag = async () => {
         button.addEventListener('click', () => {
             if (button.textContent.includes(randomCountry.name.common)) {
                 incrementScore();
-                loadFlag(); // 加载下一轮的国家旗帜
+                loadFlag(mode);
             } else {
                 alert(`错误！正确答案是：${randomCountry.name.common}`);
-                resetScore(); // 分数清零
-                loadFlag(); // 刷新题目
+                resetScore();
+                loadFlag(mode);
             }
         });
     });
 };
 
-// 在页面加载时设置开始游戏逻辑
 window.addEventListener('load', () => {
     const startButton = document.getElementById('start-button');
     const startScreen = document.getElementById('start-screen');
@@ -46,20 +51,22 @@ window.addEventListener('load', () => {
     const backButton = document.getElementById('back-button');
 
     startButton.addEventListener('click', () => {
+        const selectedMode = document.querySelector(
+            'input[name="game-mode"]:checked'
+        ).value;
         startScreen.style.display = 'none';
         gameScreen.style.display = 'block';
         resetScore();
-        loadFlag();
+        loadFlag(selectedMode);
     });
 
     backButton.addEventListener('click', () => {
         gameScreen.style.display = 'none';
         startScreen.style.display = 'block';
-        resetScore(); // 点击返回时分数清零
+        resetScore();
     });
 });
 
-// 从所有国家列表中随机选择指定数量的不重复国家作为错误选项
 const getRandomOptions = (countries, num) => {
     const selectedOptions = [];
     while (selectedOptions.length < num) {

@@ -4,11 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>猜顶级域名</title>
-        <!-- 引入通用的CSS样式文件 -->
         <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
-        <!-- 新增 logo 的代码开始 -->
         <div id="logo-container">
             <a href="../index.html">
                 <img
@@ -18,29 +16,46 @@
                 />
             </a>
         </div>
-        <!-- 新增 logo 的代码结束 -->
 
-        <!-- 主应用容器 -->
         <div id="app">
-            <!-- 添加开始界面 -->
             <div id="start-screen">
                 <h1>猜顶级域名模式</h1>
+
+                <!-- 模式选择部分 -->
+                <div id="mode-selection">
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="all"
+                            checked
+                        />
+                        全部模式
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="geoguessr"
+                        />
+                        GeoGuessr/图寻模式
+                        <span class="tooltip-container">
+                            <span class="tooltip">?</span>
+                            <span class="tooltip-text"
+                                >仅包含谷歌官方街景覆盖的国家和地区</span
+                            >
+                        </span>
+                    </label>
+                </div>
+
                 <button id="start-button">开始游戏</button>
             </div>
 
-            <!-- 游戏界面 -->
             <div id="game-screen" style="display: none">
                 <div id="flag-domain-container">
-                    <!-- 顶级域名容器，显示需要猜测的顶级域名 -->
                     <div id="flag-container"></div>
-
-                    <!-- 选项容器，显示可能的国家选项 -->
                     <div id="options-container"></div>
-
-                    <!-- 分数容器，显示当前得分 -->
                     <div id="score-container">Score: 0</div>
-
-                    <!-- 返回按钮，返回到模式选择页面 -->
                     <a href="../index.html">
                         <button id="back-button">返回</button>
                     </a>
@@ -48,7 +63,6 @@
             </div>
         </div>
 
-        <!-- 引入猜顶级域名模式的JS逻辑文件 -->
         <script type="module" src="guess-domain.js"></script>
     </body>
 </html>

@@ -6,7 +6,23 @@
         <title>Geowiz</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <!-- Designed by Freepik 链接开始 -->
+    <div id="credits">
+        <a href="https://www.freepik.com" target="_blank">Video by Freepik</a>
+    </div>
+    <!-- Designed by Freepik 链接结束 -->
+
+    <body id="index-page">
+        <!-- 视频背景开始 -->
+        <video autoplay muted loop id="home-background-video">
+            <source
+                src="./assets/videos/home-background-video.mp4"
+                type="video/mp4"
+            />
+            Your browser does not support HTML5 video.
+        </video>
+        <!-- 视频背景结束 -->
+
         <!-- 新增 logo 的代码开始 -->
         <div id="logo-container">
             <a href="index.html">
@@ -35,6 +51,23 @@
                     <button id="guess-language">猜语言</button>
                 </a>
             </div>
+        </div>
+        <!-- 社交链接区域 -->
+        <div class="social-links">
+            <a href="https://space.bilibili.com/397651971" target="_blank">
+                <img
+                    src="./assets/images/icons/bilibili.png"
+                    alt="Bilibili"
+                    class="social-icon"
+                />
+            </a>
+            <a href="https://github.com/KylinOIO" target="_blank">
+                <img
+                    src="./assets/images/icons/github.png"
+                    alt="GitHub"
+                    class="social-icon"
+                />
+            </a>
         </div>
     </body>
 </html>

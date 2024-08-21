@@ -32,11 +32,18 @@ const loadFlag = async (mode) => {
 
     optionsContainer.querySelectorAll('button').forEach((button) => {
         button.addEventListener('click', () => {
-            if (button.textContent.includes(randomCountry.name.common)) {
+            const correctCountryZH =
+                randomCountry.translations.zho?.common ||
+                randomCountry.name.common;
+            const correctCountryEN = randomCountry.name.common;
+
+            if (button.textContent.includes(correctCountryEN)) {
                 incrementScore();
                 loadFlag(mode);
             } else {
-                alert(`错误！正确答案是：${randomCountry.name.common}`);
+                alert(
+                    `错误！正确答案是：${correctCountryZH}（${correctCountryEN}）`
+                );
                 resetScore();
                 loadFlag(mode);
             }

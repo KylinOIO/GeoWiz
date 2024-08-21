@@ -60,12 +60,14 @@ function generateQuestion() {
 }
 
 function checkAnswer(selectedOption) {
-    const correctAnswer = languages[currentQuestionIndex].name;
-    if (selectedOption === correctAnswer) {
+    const correctAnswer = languages[currentQuestionIndex];
+    if (selectedOption === correctAnswer.name) {
         incrementScore();
         score++;
     } else {
-        alert(`错误！正确答案是 ${correctAnswer}。`);
+        alert(
+            `错误！正确答案是 ${correctAnswer.chineseName}（${correctAnswer.name}）`
+        );
         resetScore();
         score = 0;
     }

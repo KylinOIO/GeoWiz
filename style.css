@@ -13,7 +13,7 @@ body {
 
 #app {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -111,23 +111,6 @@ body {
     font-family: 'Arial', sans-serif; /* 设置字体 */
 }
 
-#back-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #ef2409;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-#back-button:hover {
-    background-color: #d90404;
-}
-
 #start-button {
     background-color: #446ddf; /* 按钮背景颜色 */
     color: white; /* 按钮文字颜色 */
@@ -147,30 +130,17 @@ body {
     background-color: #213bb1; /* 鼠标悬停时背景颜色 */
 }
 
-#logo-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-#logo {
-    width: 250px; /* 根据需要调整logo的大小 */
-    height: auto;
-    cursor: pointer;
-}
-
 .tooltip-container {
     position: relative;
     display: inline-block;
-    margin-left: 8px;
 }
 
 .tooltip {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: #ccc;
-    color: #fff;
+    background-color: #a4a4a4;
+    color: #ffffff;
     text-align: center;
     border-radius: 50%;
     line-height: 20px;
@@ -180,12 +150,12 @@ body {
 
 .tooltip-text {
     visibility: hidden;
-    width: 220px;
+    width: 280px;
     background-color: #333;
     color: #fff;
     text-align: center;
     border-radius: 5px;
-    padding: 5px 0;
+    padding: 3px 0;
     position: absolute;
     z-index: 1;
     bottom: 125%; /* Tooltip above */
@@ -202,4 +172,118 @@ body {
 
 #mode-selection {
     margin-bottom: 20px;
+}
+
+#back-button {
+    position: absolute; /* 使按钮与页面其他内容相对定位 */
+    top: 20px; /* 设置按钮距离页面顶部的距离 */
+    left: 20px; /* 设置按钮距离页面左侧的距离 */
+    padding: 10px 20px; /* 调整按钮的内边距，增加可点击区域 */
+    font-size: 16px; /* 调整字体大小，确保易读性 */
+    background-color: #16a322; /* 统一背景颜色，使用鲜明的绿色 */
+    color: white; /* 字体颜色设置为白色，确保对比度 */
+    border: none; /* 去掉边框 */
+    border-radius: 8px; /* 圆角设计，与前一个按钮保持一致 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果，增强立体感 */
+    cursor: pointer; /* 鼠标悬停时，指针变为手形 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    z-index: 1000; /* 确保按钮位于页面的最上层 */
+}
+
+#back-button:hover {
+    background-color: #15922e; /* 悬停时改变背景颜色 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* 悬停时增强阴影效果 */
+}
+
+#back-button-start-screen {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#back-button-start-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #16a322; /* 背景颜色，绿色 */
+    color: white; /* 字体颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 8px; /* 添加圆角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    cursor: pointer; /* 鼠标变为手形 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+#back-button-start-screen button:hover {
+    background-color: #15922e; /* 悬停时改变背景颜色 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* 悬停时增加阴影 */
+}
+
+#logo-container {
+    position: absolute;
+    top: 10px;
+    left: 100px; /* 将左侧的偏移量增加到70px，避免与返回按钮重叠 */
+}
+
+#logo {
+    width: 250px; /* 根据需要调整logo的大小 */
+    height: auto;
+    cursor: pointer;
+}
+
+/* 单独为index.html的Logo设置样式 */
+body#index-page #logo-container {
+    left: 10px; /* index.html页面保持原始位置 */
+}
+
+/* 视频背景样式 */
+#home-background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    filter: blur(4px); /* 模糊效果 */
+    -webkit-filter: blur(4px); /* Safari支持 */
+    opacity: 0.8; /* 控制透明度 */
+}
+
+#credits {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #27ddf1; /* 设置文字颜色 */
+    z-index: 2; /* 确保文字在视频上方显示 */
+}
+
+#credits a {
+    text-decoration: none;
+    color: #138f9a; /* 链接文字颜色 */
+}
+
+#credits a:hover {
+    text-decoration: underline; /* 鼠标悬停时的效果 */
+}
+
+/* 社交链接样式 */
+.social-links {
+    position: fixed; /* 固定位置 */
+    bottom: 10px; /* 也可以使用 bottom: 10px; */
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 35px; /* 图标宽度 */
+    height: 35px; /* 图标高度 */
+    transition: transform 0.3s; /* 鼠标悬停效果 */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* 悬停放大效果 */
 }

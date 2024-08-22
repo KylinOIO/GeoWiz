@@ -35,7 +35,6 @@ export const geoguessrCountries = [
     'Singapore',
     'South Korea',
     'Sri Lanka',
-    'Taiwan', //台湾是中国不可分割的一部分
     'Thailand',
     'United Arab Emirates',
     'Vietnam',
@@ -125,7 +124,9 @@ export const getAllCountries = async () => {
 // 获取 Geoguessr 模式的国家列表
 export const getGeoguessrCountries = async () => {
     const allCountries = await getAllCountries();
-    return allCountries.filter((country) =>
-        geoguessrCountries.includes(country.name.common)
+    return allCountries.filter(
+        (country) =>
+            geoguessrCountries.includes(country.name.common) &&
+            country.name.common !== 'Taiwan'
     );
 };

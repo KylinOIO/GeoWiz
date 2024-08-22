@@ -287,3 +287,39 @@ body#index-page #logo-container {
 .social-icon:hover {
     transform: scale(1.1); /* 悬停放大效果 */
 }
+
+/* 为大框容器添加样式 */
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#flag-learning-container {
+    text-align: center;
+    padding: 20px; /* 减少内边距，避免内容过于拥挤 */
+    background-color: #4797e7;
+    border: 10px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 100%; /* 确保宽度不会超过视口 */
+    max-height: 90vh; /* 确保大框的最大高度不超过视口高度 */
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+#flags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.flag-item {
+    text-align: center;
+}
+
+.flag-item img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

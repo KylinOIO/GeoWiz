@@ -118,15 +118,19 @@ export const geoguessrCountries = [
 export const getAllCountries = async () => {
     const response = await fetch('https://restcountries.com/v3.1/all');
     const allCountries = await response.json();
-    return allCountries;
+
+    // 过滤掉台湾
+    const filteredCountries = allCountries.filter(
+        (country) => country.name.common !== 'Taiwan'
+    );
+
+    return filteredCountries;
 };
 
 // 获取 Geoguessr 模式的国家列表
 export const getGeoguessrCountries = async () => {
     const allCountries = await getAllCountries();
-    return allCountries.filter(
-        (country) =>
-            geoguessrCountries.includes(country.name.common) &&
-            country.name.common !== 'Taiwan'
+    return allCountries.filter((country) =>
+        geoguessrCountries.includes(country.name.common)
     );
 };

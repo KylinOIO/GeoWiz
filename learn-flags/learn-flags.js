@@ -1,8 +1,15 @@
-import { getAllCountries } from '../countries.js';
+import { getAllCountries, getGeoguessrCountries } from '../countries.js';
 
-const loadFlags = async () => {
-    const countries = await getAllCountries();
+const loadFlags = async (mode) => {
+    let countries;
+    if (mode === 'all') {
+        countries = await getAllCountries();
+    } else if (mode === 'geo') {
+        countries = await getGeoguessrCountries();
+    }
+
     const flagsGrid = document.getElementById('flags-grid');
+    flagsGrid.innerHTML = ''; // 清空之前的内容
 
     countries.forEach((country) => {
         const countryNameZH =
@@ -20,10 +27,17 @@ const loadFlags = async () => {
 };
 
 window.addEventListener('load', () => {
-    loadFlags();
+    const allButton = document.getElementById('all-button');
+    const geoButton = document.getElementById('geo-button');
 
-    const backButton = document.getElementById('back-button');
-    backButton.addEventListener('click', () => {
-        window.location.href = '../index.html';
+    allButton.addEventListener('click', () => {
+        loadFlags('all');
     });
+
+    geoButton.addEventListener('click', () => {
+        loadFlags('geo');
+    });
+
+    // 默认加载“全部”模式
+    loadFlags('all');
 });

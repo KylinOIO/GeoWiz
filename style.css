@@ -323,3 +323,14 @@ body#index-page #logo-container {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+#mode-switcher {
+    margin-bottom: 20px;
+}
+
+#mode-switcher button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

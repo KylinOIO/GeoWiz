@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>猜电话区号</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <div id="logo-container">
+            <a href="../index.html">
+                <img
+                    src="../assets/images/common/geowiz-logo.png"
+                    alt="Geowiz Logo"
+                    id="logo"
+                />
+            </a>
+        </div>
+
+        <div id="app">
+            <div id="start-screen">
+                <a href="../index.html" id="back-button-start-screen">
+                    <button>返回</button>
+                </a>
+                <h1>猜电话区号模式</h1>
+
+                <!-- 模式选择部分 -->
+                <div id="mode-selection">
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="all"
+                            checked
+                        />
+                        全部模式
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="game-mode"
+                            value="geoguessr"
+                        />
+                        GeoGuessr/图寻模式
+                        <span class="tooltip-container">
+                            <span class="tooltip">?</span>
+                            <span class="tooltip-text">
+                                仅包含谷歌官方街景覆盖的国家和地区
+                            </span>
+                        </span>
+                    </label>
+                </div>
+
+                <button id="start-button">开始游戏</button>
+            </div>
+
+            <div id="game-screen" style="display: none">
+                <div id="calling-code-container">
+                    <div id="question"></div>
+                    <div id="options-container"></div>
+                    <div id="score-container">Score: 0</div>
+                    <a href="../index.html">
+                        <button id="back-button">返回</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="guess-calling-code.js"></script>
+    </body>
+</html>

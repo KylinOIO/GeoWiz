@@ -1,102 +1,502 @@
 [
-    { "code": "+1", "countryName": "Canada" },
-    { "code": "+1", "countryName": "United States" },
-    { "code": "+1 340", "countryName": "US Virgin Islands" },
-    { "code": "+1 670", "countryName": "Northern Mariana Islands" },
-    { "code": "+1 670", "countryName": "Guam" },
-    { "code": "+1 684", "countryName": "American Samoa" },
-    { "code": "+1 787", "countryName": "Puerto Rico" },
-    { "code": "+1 939", "countryName": "Puerto Rico" },
-    { "code": "+1 809", "countryName": "Dominican Republic" },
-    { "code": "+1 829", "countryName": "Dominican Republic" },
-    { "code": "+1 849", "countryName": "Dominican Republic" },
-    { "code": "+27", "countryName": "South Africa" },
-    { "code": "+216", "countryName": "Tunisia" },
-    { "code": "+221", "countryName": "Senegal" },
-    { "code": "+233", "countryName": "Ghana" },
-    { "code": "+234", "countryName": "Nigeria" },
-    { "code": "+254", "countryName": "Kenya" },
-    { "code": "+256", "countryName": "Uganda" },
-    { "code": "+261", "countryName": "Madagascar" },
-    { "code": "+266", "countryName": "Lesotho" },
-    { "code": "+267", "countryName": "Botswana" },
-    { "code": "+268", "countryName": "Eswatini" },
-    { "code": "+298", "countryName": "Faroe Islands" },
-    { "code": "+299", "countryName": "Greenland" },
-    { "code": "+30", "countryName": "Greece" },
-    { "code": "+31", "countryName": "Netherlands" },
-    { "code": "+32", "countryName": "Belgium" },
-    { "code": "+33", "countryName": "France" },
-    { "code": "+34", "countryName": "Spain" },
-    { "code": "+36", "countryName": "Hungary" },
-    { "code": "+39", "countryName": "Italy" },
-    { "code": "+350", "countryName": "Gibraltar" },
-    { "code": "+351", "countryName": "Portugal" },
-    { "code": "+352", "countryName": "Luxembourg" },
-    { "code": "+353", "countryName": "Ireland" },
-    { "code": "+354", "countryName": "Iceland" },
-    { "code": "+355", "countryName": "Albania" },
-    { "code": "+356", "countryName": "Malta" },
-    { "code": "+358", "countryName": "Finland" },
-    { "code": "+359", "countryName": "Bulgaria" },
-    { "code": "+370", "countryName": "Lithuania" },
-    { "code": "+371", "countryName": "Latvia" },
-    { "code": "+372", "countryName": "Estonia" },
-    { "code": "+376", "countryName": "Andorra" },
-    { "code": "+377", "countryName": "Monaco" },
-    { "code": "+378", "countryName": "San Marino" },
-    { "code": "+380", "countryName": "Ukraine" },
-    { "code": "+381", "countryName": "Serbia" },
-    { "code": "+382", "countryName": "Montenegro" },
-    { "code": "+385", "countryName": "Croatia" },
-    { "code": "+386", "countryName": "Slovenia" },
-    { "code": "+389", "countryName": "North Macedonia" },
-    { "code": "+40", "countryName": "Romania" },
-    { "code": "+41", "countryName": "Switzerland" },
-    { "code": "+43", "countryName": "Austria" },
-    { "code": "+44", "countryName": "United Kingdom" },
-    { "code": "+44 1534", "countryName": "Jersey" },
-    { "code": "+44 1624", "countryName": "Isle of Man" },
-    { "code": "+45", "countryName": "Denmark" },
-    { "code": "+46", "countryName": "Sweden" },
-    { "code": "+47", "countryName": "Norway" },
-    { "code": "+48", "countryName": "Poland" },
-    { "code": "+49", "countryName": "Germany" },
-    { "code": "+420", "countryName": "Czech Republic" },
-    { "code": "+421", "countryName": "Slovakia" },
-    { "code": "+51", "countryName": "Peru" },
-    { "code": "+52", "countryName": "Mexico" },
-    { "code": "+54", "countryName": "Argentina" },
-    { "code": "+55", "countryName": "Brazil" },
-    { "code": "+56", "countryName": "Chile" },
-    { "code": "+57", "countryName": "Colombia" },
-    { "code": "+502", "countryName": "Guatemala" },
-    { "code": "+591", "countryName": "Bolivia" },
-    { "code": "+593", "countryName": "Ecuador" },
-    { "code": "+598", "countryName": "Uruguay" },
-    { "code": "+599 9", "countryName": "Curaçao" },
-    { "code": "+60", "countryName": "Malaysia" },
-    { "code": "+61", "countryName": "Australia" },
-    { "code": "+61 8 9164", "countryName": "Christmas Island" },
-    { "code": "+62", "countryName": "Indonesia" },
-    { "code": "+63", "countryName": "Philippines" },
-    { "code": "+64", "countryName": "New Zealand" },
-    { "code": "+65", "countryName": "Singapore" },
-    { "code": "+66", "countryName": "Thailand" },
-    { "code": "+7", "countryName": "Russia" },
-    { "code": "+81", "countryName": "Japan" },
-    { "code": "+82", "countryName": "South Korea" },
-    { "code": "+84", "countryName": "Vietnam" },
-    { "code": "+855", "countryName": "Cambodia" },
-    { "code": "+856", "countryName": "Laos" },
-    { "code": "+880", "countryName": "Bangladesh" },
-    { "code": "+90", "countryName": "Turkey" },
-    { "code": "+91", "countryName": "India" },
-    { "code": "+94", "countryName": "Sri Lanka" },
-    { "code": "+962", "countryName": "Jordan" },
-    { "code": "+971", "countryName": "United Arab Emirates" },
-    { "code": "+972", "countryName": "Israel" },
-    { "code": "+975", "countryName": "Bhutan" },
-    { "code": "+976", "countryName": "Mongolia" },
-    { "code": "+996", "countryName": "Kyrgyzstan" }
+    {
+        "countryName": "Canada",
+        "chineseName": "加拿大",
+        "code": "+1"
+    },
+    {
+        "countryName": "United States",
+        "chineseName": "美国",
+        "code": "+1"
+    },
+    {
+        "countryName": "US Virgin Islands",
+        "chineseName": "美属维尔京群岛",
+        "code": "+1 340"
+    },
+    {
+        "countryName": "Northern Mariana Islands",
+        "chineseName": "北马里亚纳群岛",
+        "code": "+1 670"
+    },
+    {
+        "countryName": "Guam",
+        "chineseName": "关岛",
+        "code": "+1 670"
+    },
+    {
+        "countryName": "American Samoa",
+        "chineseName": "美属萨摩亚",
+        "code": "+1 684"
+    },
+    {
+        "countryName": "Puerto Rico",
+        "chineseName": "波多黎各",
+        "code": "+1 787"
+    },
+    {
+        "countryName": "Puerto Rico",
+        "chineseName": "波多黎各",
+        "code": "+1 939"
+    },
+    {
+        "countryName": "Dominican Republic",
+        "chineseName": "多米尼加共和国",
+        "code": "+1 809"
+    },
+    {
+        "countryName": "Dominican Republic",
+        "chineseName": "多米尼加共和国",
+        "code": "+1 829"
+    },
+    {
+        "countryName": "Dominican Republic",
+        "chineseName": "多米尼加共和国",
+        "code": "+1 849"
+    },
+    {
+        "countryName": "South Africa",
+        "chineseName": "南非",
+        "code": "+27"
+    },
+    {
+        "countryName": "Tunisia",
+        "chineseName": "突尼斯",
+        "code": "+216"
+    },
+    {
+        "countryName": "Senegal",
+        "chineseName": "塞内加尔",
+        "code": "+221"
+    },
+    {
+        "countryName": "Ghana",
+        "chineseName": "加纳",
+        "code": "+233"
+    },
+    {
+        "countryName": "Nigeria",
+        "chineseName": "尼日利亚",
+        "code": "+234"
+    },
+    {
+        "countryName": "Kenya",
+        "chineseName": "肯尼亚",
+        "code": "+254"
+    },
+    {
+        "countryName": "Uganda",
+        "chineseName": "乌干达",
+        "code": "+256"
+    },
+    {
+        "countryName": "Madagascar",
+        "chineseName": "马达加斯加",
+        "code": "+261"
+    },
+    {
+        "countryName": "Lesotho",
+        "chineseName": "莱索托",
+        "code": "+266"
+    },
+    {
+        "countryName": "Botswana",
+        "chineseName": "博茨瓦纳",
+        "code": "+267"
+    },
+    {
+        "countryName": "Eswatini",
+        "chineseName": "斯威士兰",
+        "code": "+268"
+    },
+    {
+        "countryName": "Faroe Islands",
+        "chineseName": "法罗群岛",
+        "code": "+298"
+    },
+    {
+        "countryName": "Greenland",
+        "chineseName": "格陵兰",
+        "code": "+299"
+    },
+    {
+        "countryName": "Greece",
+        "chineseName": "希腊",
+        "code": "+30"
+    },
+    {
+        "countryName": "Netherlands",
+        "chineseName": "荷兰",
+        "code": "+31"
+    },
+    {
+        "countryName": "Belgium",
+        "chineseName": "比利时",
+        "code": "+32"
+    },
+    {
+        "countryName": "France",
+        "chineseName": "法国",
+        "code": "+33"
+    },
+    {
+        "countryName": "Spain",
+        "chineseName": "西班牙",
+        "code": "+34"
+    },
+    {
+        "countryName": "Hungary",
+        "chineseName": "匈牙利",
+        "code": "+36"
+    },
+    {
+        "countryName": "Italy",
+        "chineseName": "意大利",
+        "code": "+39"
+    },
+    {
+        "countryName": "Gibraltar",
+        "chineseName": "直布罗陀",
+        "code": "+350"
+    },
+    {
+        "countryName": "Portugal",
+        "chineseName": "葡萄牙",
+        "code": "+351"
+    },
+    {
+        "countryName": "Luxembourg",
+        "chineseName": "卢森堡",
+        "code": "+352"
+    },
+    {
+        "countryName": "Ireland",
+        "chineseName": "爱尔兰",
+        "code": "+353"
+    },
+    {
+        "countryName": "Iceland",
+        "chineseName": "冰岛",
+        "code": "+354"
+    },
+    {
+        "countryName": "Albania",
+        "chineseName": "阿尔巴尼亚",
+        "code": "+355"
+    },
+    {
+        "countryName": "Malta",
+        "chineseName": "马耳他",
+        "code": "+356"
+    },
+    {
+        "countryName": "Finland",
+        "chineseName": "芬兰",
+        "code": "+358"
+    },
+    {
+        "countryName": "Bulgaria",
+        "chineseName": "保加利亚",
+        "code": "+359"
+    },
+    {
+        "countryName": "Lithuania",
+        "chineseName": "立陶宛",
+        "code": "+370"
+    },
+    {
+        "countryName": "Latvia",
+        "chineseName": "拉脱维亚",
+        "code": "+371"
+    },
+    {
+        "countryName": "Estonia",
+        "chineseName": "爱沙尼亚",
+        "code": "+372"
+    },
+    {
+        "countryName": "Andorra",
+        "chineseName": "安道尔",
+        "code": "+376"
+    },
+    {
+        "countryName": "Monaco",
+        "chineseName": "摩纳哥",
+        "code": "+377"
+    },
+    {
+        "countryName": "San Marino",
+        "chineseName": "圣马力诺",
+        "code": "+378"
+    },
+    {
+        "countryName": "Ukraine",
+        "chineseName": "乌克兰",
+        "code": "+380"
+    },
+    {
+        "countryName": "Serbia",
+        "chineseName": "塞尔维亚",
+        "code": "+381"
+    },
+    {
+        "countryName": "Montenegro",
+        "chineseName": "黑山",
+        "code": "+382"
+    },
+    {
+        "countryName": "Croatia",
+        "chineseName": "克罗地亚",
+        "code": "+385"
+    },
+    {
+        "countryName": "Slovenia",
+        "chineseName": "斯洛文尼亚",
+        "code": "+386"
+    },
+    {
+        "countryName": "North Macedonia",
+        "chineseName": "北马其顿",
+        "code": "+389"
+    },
+    {
+        "countryName": "Romania",
+        "chineseName": "罗马尼亚",
+        "code": "+40"
+    },
+    {
+        "countryName": "Switzerland",
+        "chineseName": "瑞士",
+        "code": "+41"
+    },
+    {
+        "countryName": "Austria",
+        "chineseName": "奥地利",
+        "code": "+43"
+    },
+    {
+        "countryName": "United Kingdom",
+        "chineseName": "英国",
+        "code": "+44"
+    },
+    {
+        "countryName": "Jersey",
+        "chineseName": "泽西岛",
+        "code": "+44 1534"
+    },
+    {
+        "countryName": "Isle of Man",
+        "chineseName": "马恩岛",
+        "code": "+44 1624"
+    },
+    {
+        "countryName": "Denmark",
+        "chineseName": "丹麦",
+        "code": "+45"
+    },
+    {
+        "countryName": "Sweden",
+        "chineseName": "瑞典",
+        "code": "+46"
+    },
+    {
+        "countryName": "Norway",
+        "chineseName": "挪威",
+        "code": "+47"
+    },
+    {
+        "countryName": "Poland",
+        "chineseName": "波兰",
+        "code": "+48"
+    },
+    {
+        "countryName": "Germany",
+        "chineseName": "德国",
+        "code": "+49"
+    },
+    {
+        "countryName": "Czech Republic",
+        "chineseName": "捷克共和国",
+        "code": "+420"
+    },
+    {
+        "countryName": "Slovakia",
+        "chineseName": "斯洛伐克",
+        "code": "+421"
+    },
+    {
+        "countryName": "Peru",
+        "chineseName": "秘鲁",
+        "code": "+51"
+    },
+    {
+        "countryName": "Mexico",
+        "chineseName": "墨西哥",
+        "code": "+52"
+    },
+    {
+        "countryName": "Argentina",
+        "chineseName": "阿根廷",
+        "code": "+54"
+    },
+    {
+        "countryName": "Brazil",
+        "chineseName": "巴西",
+        "code": "+55"
+    },
+    {
+        "countryName": "Chile",
+        "chineseName": "智利",
+        "code": "+56"
+    },
+    {
+        "countryName": "Colombia",
+        "chineseName": "哥伦比亚",
+        "code": "+57"
+    },
+    {
+        "countryName": "Guatemala",
+        "chineseName": "危地马拉",
+        "code": "+502"
+    },
+    {
+        "countryName": "Bolivia",
+        "chineseName": "玻利维亚",
+        "code": "+591"
+    },
+    {
+        "countryName": "Ecuador",
+        "chineseName": "厄瓜多尔",
+        "code": "+593"
+    },
+    {
+        "countryName": "Uruguay",
+        "chineseName": "乌拉圭",
+        "code": "+598"
+    },
+    {
+        "countryName": "Curaçao",
+        "chineseName": "库拉索",
+        "code": "+599 9"
+    },
+    {
+        "countryName": "Malaysia",
+        "chineseName": "马来西亚",
+        "code": "+60"
+    },
+    {
+        "countryName": "Australia",
+        "chineseName": "澳大利亚",
+        "code": "+61"
+    },
+    {
+        "countryName": "Christmas Island",
+        "chineseName": "圣诞岛",
+        "code": "+61 8 9164"
+    },
+    {
+        "countryName": "Indonesia",
+        "chineseName": "印度尼西亚",
+        "code": "+62"
+    },
+    {
+        "countryName": "Philippines",
+        "chineseName": "菲律宾",
+        "code": "+63"
+    },
+    {
+        "countryName": "New Zealand",
+        "chineseName": "新西兰",
+        "code": "+64"
+    },
+    {
+        "countryName": "Singapore",
+        "chineseName": "新加坡",
+        "code": "+65"
+    },
+    {
+        "countryName": "Thailand",
+        "chineseName": "泰国",
+        "code": "+66"
+    },
+    {
+        "countryName": "Russia",
+        "chineseName": "俄罗斯",
+        "code": "+7"
+    },
+    {
+        "countryName": "Japan",
+        "chineseName": "日本",
+        "code": "+81"
+    },
+    {
+        "countryName": "South Korea",
+        "chineseName": "韩国",
+        "code": "+82"
+    },
+    {
+        "countryName": "Vietnam",
+        "chineseName": "越南",
+        "code": "+84"
+    },
+    {
+        "countryName": "Cambodia",
+        "chineseName": "柬埔寨",
+        "code": "+855"
+    },
+    {
+        "countryName": "Laos",
+        "chineseName": "老挝",
+        "code": "+856"
+    },
+    {
+        "countryName": "Bangladesh",
+        "chineseName": "孟加拉国",
+        "code": "+880"
+    },
+    {
+        "countryName": "Turkey",
+        "chineseName": "土耳其",
+        "code": "+90"
+    },
+    {
+        "countryName": "India",
+        "chineseName": "印度",
+        "code": "+91"
+    },
+    {
+        "countryName": "Sri Lanka",
+        "chineseName": "斯里兰卡",
+        "code": "+94"
+    },
+    {
+        "countryName": "Jordan",
+        "chineseName": "约旦",
+        "code": "+962"
+    },
+    {
+        "countryName": "United Arab Emirates",
+        "chineseName": "阿联酋",
+        "code": "+971"
+    },
+    {
+        "countryName": "Israel",
+        "chineseName": "以色列",
+        "code": "+972"
+    },
+    {
+        "countryName": "Bhutan",
+        "chineseName": "不丹",
+        "code": "+975"
+    },
+    {
+        "countryName": "Mongolia",
+        "chineseName": "蒙古",
+        "code": "+976"
+    },
+    {
+        "countryName": "Kyrgyzstan",
+        "chineseName": "吉尔吉斯斯坦",
+        "code": "+996"
+    }
 ]

@@ -9,7 +9,7 @@ const optionsContainer = document.getElementById('options-container');
 const scoreElement = document.getElementById('score-container');
 const startScreen = document.getElementById('start-screen');
 const startButton = document.getElementById('start-button');
-const callingCodeContainer = document.getElementById('calling-code-container');
+const callingCodeContainer = document.getElementById('flag-domain-container');
 
 // 动态加载电话区号数据
 async function loadCountryCodes() {
@@ -57,7 +57,10 @@ function generateQuestion() {
     optionsContainer.innerHTML = options
         .map(
             (option) =>
-                `<button class="option-button">${option.countryName}</button>`
+                `<button class="option-button">
+                <div>${option.chineseName}</div>
+                <div>${option.countryName}</div>
+            </button>`
         )
         .join('');
 
@@ -119,6 +122,22 @@ document
     .getElementById('back-button')
     .addEventListener('click', returnToStartScreen);
 
-window.addEventListener('DOMContentLoaded', async () => {
-    await loadCountryCodes(); // 等待数据加载完成
+window.addEventListener('load', () => {
+    const startButton = document.getElementById('start-button');
+    const startScreen = document.getElementById('start-screen');
+    const gameScreen = document.getElementById('game-screen');
+    const backButton = document.getElementById('back-button');
+
+    startButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        gameScreen.style.display = 'block';
+        resetScore();
+        loadCountryCodes();
+    });
+
+    backButton.addEventListener('click', () => {
+        gameScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+        resetScore();
+    });
 });

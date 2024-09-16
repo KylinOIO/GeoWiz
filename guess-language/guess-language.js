@@ -53,26 +53,37 @@ function generateQuestion() {
 
     const optionButtons = document.querySelectorAll('.option-button');
     optionButtons.forEach((button, index) => {
+        button.style.backgroundColor = ''; // 清除按钮背景色
         button.addEventListener('click', () =>
-            checkAnswer(options[index].name)
+            checkAnswer(options[index], button)
         );
     });
 }
 
-function checkAnswer(selectedOption) {
+function checkAnswer(selectedOption, button) {
     const correctAnswer = languages[currentQuestionIndex];
-    if (selectedOption === correctAnswer.name) {
-        incrementScore();
+
+    if (selectedOption.name === correctAnswer.name) {
+        // 用户选择正确答案，按钮变为绿色
+        button.style.backgroundColor = 'green';
         score++;
+        incrementScore();
+
+        // 2秒后自动生成下一题
+        setTimeout(() => {
+            generateQuestion();
+        }, 2000);
     } else {
-        alert(
-            `错误！正确答案是 ${correctAnswer.chineseName}（${correctAnswer.name}）`
-        );
-        resetScore();
-        score = 0;
+        // 用户选择错误答案，按钮变为红色
+        button.style.backgroundColor = 'red';
+
+        // 等待用户选择正确答案，不切换问题
+        setTimeout(() => {
+            button.style.backgroundColor = ''; // 2秒后重置颜色
+        }, 2000);
     }
+
     updateScore();
-    generateQuestion();
 }
 
 function updateScore() {

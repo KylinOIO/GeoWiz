@@ -61,7 +61,9 @@ function generateQuestion() {
         )
         .join('');
 
+    // 重置所有按钮样式
     document.querySelectorAll('.option-button').forEach((button) => {
+        button.style.backgroundColor = ''; // 清除按钮背景色
         button.addEventListener('click', (e) =>
             checkAnswer(e.target.textContent)
         );
@@ -70,14 +72,27 @@ function generateQuestion() {
 
 function checkAnswer(selectedOption) {
     const correctAnswer = countryCodes[currentQuestionIndex];
-    if (selectedOption === correctAnswer.countryName) {
-        score++;
-    } else {
-        alert(`错误！正确答案是 ${correctAnswer.countryName}`);
-        score = 0; // 简化分数重置逻辑
-    }
-    updateScore();
-    generateQuestion();
+    const buttons = document.querySelectorAll('.option-button');
+
+    buttons.forEach((button) => {
+        if (button.textContent === selectedOption) {
+            if (selectedOption === correctAnswer.countryName) {
+                // 正确答案，变为绿色
+                button.style.backgroundColor = 'green';
+                score++;
+                updateScore();
+                setTimeout(() => {
+                    generateQuestion(); // 2秒后生成新问题
+                }, 2000);
+            } else {
+                // 错误答案，变为红色
+                button.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    button.style.backgroundColor = ''; // 重置按钮颜色
+                }, 2000); // 2秒后恢复颜色，继续等待用户选择正确答案
+            }
+        }
+    });
 }
 
 function updateScore() {

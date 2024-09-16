@@ -26,11 +26,12 @@ const loadFlag = async (mode) => {
         .map((country) => {
             const countryNameZH =
                 country.translations.zho?.common || country.name.common;
-            return `<button>${countryNameZH}<br>${country.name.common}</button>`;
+            return `<button class="option-button">${countryNameZH}<br>${country.name.common}</button>`;
         })
         .join('');
 
     optionsContainer.querySelectorAll('button').forEach((button) => {
+        button.style.backgroundColor = ''; // 清除按钮背景色
         button.addEventListener('click', () => {
             const correctCountryZH =
                 randomCountry.translations.zho?.common ||
@@ -38,14 +39,19 @@ const loadFlag = async (mode) => {
             const correctCountryEN = randomCountry.name.common;
 
             if (button.textContent.includes(correctCountryEN)) {
+                // 用户选择正确答案，按钮变为绿色
+                button.style.backgroundColor = 'green';
                 incrementScore();
-                loadFlag(mode);
+
+                setTimeout(() => {
+                    loadFlag(mode); // 2秒后加载下一个问题
+                }, 2000);
             } else {
-                alert(
-                    `错误！正确答案是：${correctCountryZH}（${correctCountryEN}）`
-                );
-                resetScore();
-                loadFlag(mode);
+                // 用户选择错误答案，按钮变为红色
+                button.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    button.style.backgroundColor = ''; // 重置颜色
+                }, 2000); // 等待用户选择正确答案
             }
         });
     });

@@ -303,8 +303,9 @@ body#index-page #logo-container {
     border: 10px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 100%; /* 确保宽度不会超过视口 */
-    max-height: 90vh; /* 确保大框的最大高度不超过视口高度 */
+    min-width: 80vh;
+    max-width: 90vh; /* 确保宽度不会超过视口 */
+    max-height: 75vh; /* 确保大框的最大高度不超过视口高度 */
     overflow-y: auto; /* 允许垂直滚动 */
 }
 

@@ -59,11 +59,19 @@ export const loadLanguage = async () => {
 
         // 清空输入框
         inputField.value = '';
+        inputField.style.backgroundColor = ''; // 清空输入框背景颜色
         resultDisplay.innerHTML = ''; // 清空结果显示区域
 
         // 移除旧的点击事件监听器，避免多次绑定
         submitButton.replaceWith(submitButton.cloneNode(true));
         skipButton.replaceWith(skipButton.cloneNode(true));
+
+        // 添加按下Enter键的监听器
+        inputField.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                submitButton.click(); // 模拟点击提交按钮
+            }
+        });
 
         // 提交答案的逻辑
         document
@@ -78,19 +86,27 @@ export const loadLanguage = async () => {
                         randomLanguage.chineseName.toLowerCase()
                     )
                 ) {
+                    // 用户答案正确
                     resultDisplay.style.color = 'green';
-                    resultDisplay.innerHTML = '正确!';
+                    resultDisplay.innerHTML = `正确! 答案是: ${randomLanguage.chineseName} (${correctAnswer})`;
 
+                    inputField.style.backgroundColor = 'green'; // 输入框变为绿色
+                    incrementScore(); // 分数+1
+
+                    // 2秒后切换到下一题
                     setTimeout(() => {
-                        loadLanguage(); // 2秒后加载下一个问题
+                        loadLanguage(); // 加载下一个问题
                     }, 2000);
                 } else {
+                    // 用户答案错误
                     resultDisplay.style.color = 'red';
                     resultDisplay.innerHTML = `错误! 正确答案是: ${randomLanguage.chineseName} (${correctAnswer})`;
 
-                    // 答错后2秒后切换到下一题
+                    inputField.style.backgroundColor = 'red'; // 输入框变为红色
+
+                    // 2秒后切换到下一题
                     setTimeout(() => {
-                        loadLanguage();
+                        loadLanguage(); // 加载下一个问题
                     }, 2000);
                 }
             });

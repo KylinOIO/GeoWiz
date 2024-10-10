@@ -1,8 +1,12 @@
-//guess-flag.js
 import { incrementScore, resetScore } from '../utils.js';
 import { getAllCountries, getGeoguessrCountries } from '../countries.js';
 
+let isLoading = false; // 增加一个加载状态变量
+
 const loadFlag = async (mode) => {
+    if (isLoading) return; // 如果正在加载，直接返回，防止重复加载
+    isLoading = true; // 设置为正在加载
+
     let countries;
 
     if (mode === 'geoguessr') {
@@ -50,10 +54,7 @@ const loadFlag = async (mode) => {
 
     // 监听跳过按钮
     skipButton.onclick = () => {
-        showAnswer(randomCountry);
-        setTimeout(() => {
-            loadFlag(mode);
-        }, 2000);
+        showAnswer(randomCountry, mode); // 显示答案并等待下一题加载
     };
 
     // 监听Enter键提交
@@ -62,17 +63,26 @@ const loadFlag = async (mode) => {
             submitAnswer();
         }
     });
+
+    isLoading = false; // 加载完成后，设置为未加载状态
 };
 
-// 显示正确答案
-const showAnswer = (randomCountry) => {
+// 显示正确答案并延迟加载下一题
+const showAnswer = (randomCountry, mode) => {
     const correctCountryZH =
         randomCountry.translations.zho?.common || randomCountry.name.common;
     const correctCountryEN = randomCountry.name.common;
     const answerDisplay = document.getElementById('answer-display');
 
+    // 显示正确答案
     answerDisplay.style.display = 'block';
     answerDisplay.innerText = `正确答案: ${correctCountryZH} (${correctCountryEN})`;
+
+    // 2秒后加载下一题
+    setTimeout(() => {
+        answerDisplay.style.display = 'none';
+        loadFlag(mode); // 加载下一题
+    }, 2000);
 };
 
 // 检查答案的逻辑
@@ -86,21 +96,17 @@ const checkAnswer = (input, randomCountry, mode) => {
         document.getElementById('country-input').style.backgroundColor =
             'green';
         incrementScore();
-        setTimeout(() => {
-            document.getElementById('country-input').style.backgroundColor = '';
-            document.getElementById('country-input').value = '';
-            loadFlag(mode);
-        }, 2000);
     } else {
         // 用户选择错误答案
         document.getElementById('country-input').style.backgroundColor = 'red';
-        showAnswer(randomCountry); // 显示正确答案
-        setTimeout(() => {
-            document.getElementById('country-input').style.backgroundColor = '';
-            document.getElementById('country-input').value = '';
-            loadFlag(mode);
-        }, 2000);
     }
+
+    // 显示正确答案并清除输入框
+    showAnswer(randomCountry, mode);
+    setTimeout(() => {
+        document.getElementById('country-input').style.backgroundColor = '';
+        document.getElementById('country-input').value = '';
+    }, 2000);
 };
 
 window.addEventListener('load', () => {

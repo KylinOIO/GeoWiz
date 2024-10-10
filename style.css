@@ -222,6 +222,14 @@ body {
     position: absolute;
     top: 10px;
     left: 100px; /* 将左侧的偏移量增加到70px，避免与返回按钮重叠 */
+    padding: 10px; /* 增加一些内边距，使背景看起来更协调 */
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.2),
+        rgb(255, 255, 255, 0)
+    ); /* 渐变的半透明背景 */
+    border-radius: 15px; /* 圆角矩形 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加一个轻微的阴影效果 */
 }
 
 #logo {
@@ -353,4 +361,52 @@ body#index-page #logo-container {
     color: #2f2f2f; /* 设置字体颜色为黑色 */
     font-size: 100px; /* 将字体大小放大 */
     margin: 0; /* 去除默认的外边距 */
+}
+
+/* GitHub 反馈框的样式 */
+#github-feedback {
+    position: absolute;
+    bottom: 60px; /* 根据需要调整 */
+    right: 20px; /* 根据需要调整 */
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#github-feedback p {
+    margin: 5px 0;
+}
+
+/* 对话框样式 */
+#speech-bubble {
+    position: absolute;
+    bottom: 55px; /* 控制气泡位置 */
+    right: 0px; /* 确保对话框在GitHub logo的上方 */
+    width: 250px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.15); /* 半透明背景 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: center;
+    z-index: 10;
+}
+
+/* 创建一个小箭头，指向 GitHub logo */
+#speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* 箭头的垂直位置 */
+    right: 8px; /* 箭头的水平位置 */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.09); /* 半透明箭头 */
 }

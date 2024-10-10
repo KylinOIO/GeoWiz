@@ -77,6 +77,8 @@ const submitAnswer = () => {
     ) {
         inputField.style.backgroundColor = 'green';
         incrementScore();
+        answerDisplay.textContent = `正确答案：${correctCountryZH} (${correctCountryEN})`;
+        answerDisplay.style.display = 'block';
     } else {
         inputField.style.backgroundColor = 'red';
         answerDisplay.textContent = `正确答案：${correctCountryZH} (${correctCountryEN})`;

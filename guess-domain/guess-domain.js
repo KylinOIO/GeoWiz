@@ -1,26 +1,15 @@
-//guess-domain.js
 import { incrementScore, resetScore } from '../utils.js';
 import { getAllCountries, getGeoguessrCountries } from '../countries.js';
 
-// 从国家列表中随机选择 n 个不同的国家
-const getRandomOptions = (countries, n) => {
-    const options = [];
-    while (options.length < n) {
-        const randomCountry =
-            countries[Math.floor(Math.random() * countries.length)];
-        if (!options.includes(randomCountry)) {
-            options.push(randomCountry);
-        }
-    }
-    return options;
-};
+let currentCountry = null; // 保存当前的国家信息
 
-export const loadDomain = async () => {
+const loadDomain = async () => {
     try {
-        const flagContainer = document.getElementById('flag-container');
-        const optionsContainer = document.getElementById('options-container');
+        const domainContainer = document.getElementById('flag-container');
+        const inputField = document.getElementById('country-input');
+        const suggestionList = document.getElementById('country-suggestions');
+        const answerDisplay = document.getElementById('answer-display');
 
-        // 获取被选中的游戏模式
         const mode = document.querySelector(
             'input[name="game-mode"]:checked'
         ).value;
@@ -32,73 +21,111 @@ export const loadDomain = async () => {
             countries = await getAllCountries();
         }
 
-        const randomCountry =
+        currentCountry =
             countries[Math.floor(Math.random() * countries.length)];
 
-        if (!randomCountry.tld || !Array.isArray(randomCountry.tld)) {
-            console.error('无效的tld数据:', randomCountry);
+        if (!currentCountry.tld || !Array.isArray(currentCountry.tld)) {
+            console.error('无效的tld数据:', currentCountry);
             loadDomain();
             return;
         }
 
-        flagContainer.innerHTML = `<h2>${randomCountry.tld[0]}</h2>`;
+        domainContainer.innerHTML = `<h2>${currentCountry.tld[0]}</h2>`;
+        inputField.value = '';
+        suggestionList.innerHTML = '';
+        answerDisplay.textContent = '';
+        answerDisplay.style.display = 'none';
 
-        const options = [randomCountry, ...getRandomOptions(countries, 3)].sort(
-            () => Math.random() - 0.5
-        );
+        inputField.focus();
 
-        optionsContainer.innerHTML = options
-            .map((country) => {
-                const countryNameZH =
-                    country.translations.zho?.common || country.name.common;
-                return `<button class="option-button">${countryNameZH}<br>${country.name.common}</button>`;
-            })
-            .join('');
-
-        optionsContainer.querySelectorAll('button').forEach((button) => {
-            button.style.backgroundColor = ''; // 清除按钮背景色
-            button.addEventListener('click', () => {
-                const correctCountryZH =
-                    randomCountry.translations.zho?.common ||
-                    randomCountry.name.common;
-                const correctCountryEN = randomCountry.name.common;
-
-                if (button.textContent.trim().includes(correctCountryEN)) {
-                    button.style.backgroundColor = 'green'; // 正确答案，按钮变为绿色
-                    incrementScore();
-
-                    setTimeout(() => {
-                        loadDomain(); // 2秒后加载下一个问题
-                    }, 2000);
-                } else {
-                    button.style.backgroundColor = 'red'; // 错误答案，按钮变为红色
-                    setTimeout(() => {
-                        button.style.backgroundColor = ''; // 重置颜色
-                    }, 2000);
-                }
+        inputField.addEventListener('input', () => {
+            const query = inputField.value.toLowerCase();
+            const matches = countries.filter((country) => {
+                const countryNameZH = country.translations.zho?.common || '';
+                const countryNameEN = country.name.common || '';
+                return (
+                    countryNameZH.toLowerCase().includes(query) ||
+                    countryNameEN.toLowerCase().includes(query)
+                );
             });
+
+            suggestionList.innerHTML = matches
+                .map((country) => {
+                    const countryNameZH =
+                        country.translations.zho?.common || '';
+                    const countryNameEN = country.name.common || '';
+                    return `<option value="${countryNameZH}">${countryNameZH} (${countryNameEN})</option>`;
+                })
+                .join('');
         });
     } catch (error) {
         console.error('加载国家数据失败:', error);
     }
 };
 
+const submitAnswer = () => {
+    const inputField = document.getElementById('country-input');
+    const answerDisplay = document.getElementById('answer-display');
+    const userInput = inputField.value.trim().toLowerCase();
+    const correctCountryZH =
+        currentCountry.translations.zho?.common || currentCountry.name.common;
+    const correctCountryEN = currentCountry.name.common;
+
+    if (
+        userInput === correctCountryZH.toLowerCase() ||
+        userInput === correctCountryEN.toLowerCase()
+    ) {
+        inputField.style.backgroundColor = 'green';
+        incrementScore();
+    } else {
+        inputField.style.backgroundColor = 'red';
+        answerDisplay.textContent = `正确答案：${correctCountryZH} (${correctCountryEN})`;
+        answerDisplay.style.display = 'block';
+    }
+
+    setTimeout(() => {
+        inputField.style.backgroundColor = '';
+        inputField.value = '';
+        loadDomain();
+    }, 2000);
+};
+
 window.addEventListener('load', () => {
     const startButton = document.getElementById('start-button');
-    const startScreen = document.getElementById('start-screen');
-    const gameScreen = document.getElementById('game-screen');
     const backButton = document.getElementById('back-button');
 
     startButton.addEventListener('click', () => {
-        startScreen.style.display = 'none';
-        gameScreen.style.display = 'block';
+        document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('game-screen').style.display = 'block';
         resetScore();
         loadDomain();
     });
 
     backButton.addEventListener('click', () => {
-        gameScreen.style.display = 'none';
-        startScreen.style.display = 'block';
+        document.getElementById('game-screen').style.display = 'none';
+        document.getElementById('start-screen').style.display = 'block';
         resetScore();
+    });
+
+    document
+        .getElementById('submit-button')
+        .addEventListener('click', submitAnswer);
+
+    document
+        .getElementById('country-input')
+        .addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                submitAnswer();
+            }
+        });
+
+    document.getElementById('skip-button').addEventListener('click', () => {
+        const answerDisplay = document.getElementById('answer-display');
+        answerDisplay.textContent = `正确答案：${currentCountry.translations.zho?.common} (${currentCountry.name.common})`;
+        answerDisplay.style.display = 'block';
+        setTimeout(() => {
+            answerDisplay.style.display = 'none';
+            loadDomain();
+        }, 2000);
     });
 });

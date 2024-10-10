@@ -1,541 +1,1164 @@
 [
     {
-        "name": "English",
-        "chineseName": "英语",
+        "name": "Bengali",
+        "chineseName": "孟加拉语",
         "options": [
-            "Hello, how are you?",
-            "Hi, what's up?",
-            "Good morning!",
-            "How are things?",
-            "Hey there!"
+            "পথচারী পারাপার",
+            "পার্কিং নিষিদ্ধ",
+            "সেতু বরফে আচ্ছন্ন হতে পারে",
+            "ডান লেন শেষ হয়ে যাচ্ছে",
+            "পরবর্তী ৫ মাইল রোড ওয়ার্ক",
+            "প্রবেশ নিষেধ ভুল পথ",
+            "শুধুমাত্র অনুমোদিত যানবাহন",
+            "পাথর পড়ার সতর্কীকরণ",
+            "ভেজা অবস্থায় পিচ্ছিল",
+            "টাও অ্যাওয়ে জোন",
+            "মহাসড়ক সেবা এলাকা",
+            "পরবর্তী গ্যাস স্টেশন ২০ মাইল",
+            "স্বাগতম স্প্রিংফিল্ডে",
+            "ঢাকা পাবলিক লাইব্রেরি",
+            "চট্টগ্রাম সিটি হল",
+            "কেন্দ্রীয় উদ্যান চিড়িয়াখানা",
+            "সান ফ্রান্সিসকো বে এরিয়া",
+            "লস এঞ্জেলেস কাউন্টি যাদুঘর",
+            "শিকাগো ট্রানজিট কর্তৃপক্ষ"
         ]
     },
     {
-        "name": "Spanish",
-        "chineseName": "西班牙语",
+        "name": "Devanagari",
+        "chineseName": "天城文",
         "options": [
-            "Hola, ¿cómo estás?",
-            "¿Qué tal?",
-            "¡Buenos días!",
-            "¿Cómo te va?",
-            "¿Qué hay?"
+            "पैदल यात्री क्रॉसिंग आगे",
+            "कहीं भी पार्किंग नहीं",
+            "पुल बर्फीला हो सकता है",
+            "दाईं लेन समाप्त हो रही है",
+            "अगले ५ मील में सड़क कार्य",
+            "प्रवेश निषेध गलत रास्ता",
+            "केवल अनुमत वाहन",
+            "गिरते पत्थरों से सावधान",
+            "गीली होने पर फिसलन",
+            "टो अवे ज़ोन",
+            "राजमार्ग सेवा क्षेत्र",
+            "अगला गैस स्टेशन २० मील",
+            "स्प्रिंगफील्ड में आपका स्वागत है",
+            "दिल्ली सार्वजनिक पुस्तकालय",
+            "मुंबई सिटी हॉल",
+            "केंद्रीय पार्क चिड़ियाघर",
+            "सैन फ्रांसिस्को बे एरिया",
+            "लॉस एंजिल्स काउंटी संग्रहालय",
+            "शिकागो ट्रांजिट अथॉरिटी"
         ]
     },
     {
-        "name": "French",
-        "chineseName": "法语",
+        "name": "Gujarati",
+        "chineseName": "古吉拉特语",
         "options": [
-            "Bonjour, comment ça va?",
-            "Salut, ça va?",
-            "Coucou, ça va?",
-            "Bonjour, comment vas-tu?",
-            "Salut, comment tu vas?"
+            "પદયાત્રી ક્રોસિંગ આગળ",
+            "કોઈ પાર્કિંગ નથી",
+            "પૂલ બરફીલો હોઈ શકે છે",
+            "જમણી લેન સમાપ્ત થાય છે",
+            "આગામી ૫ માઇલમાં રોડ વર્ક",
+            "પ્રવેશ નિષેધ ખોટો માર્ગ",
+            "માત્ર મંજુર થયેલા વાહનો",
+            "ગિરમાં પથરો પડવાના ચેતવણી",
+            "ભીના સમયે ફિસલવું",
+            "ટો અવે ઝોન",
+            "હાઇવે સેવા વિસ્તાર",
+            "આગામી ગેસ સ્ટેશન  ૨૦ માઇલ",
+            "સ્પ્રિંગફિલ્ડમાં આપનું સ્વાગત છે",
+            "અમદાવાદ જાહેર પુસ્તકાલય",
+            "વડોદરા સિટી હોલ",
+            "સેન્ટ્રલ પાર્ક ઝૂ",
+            "સાન ફ્રાન્સિસ્કો બે એરીયા",
+            "લોસ એન્જેલ્સ કાઉન્ટી મ્યુઝિયમ",
+            "શિકાગો ટ્રાન્ઝિટ ઓથોરિટી"
         ]
     },
     {
-        "name": "German",
-        "chineseName": "德语",
+        "name": "Gurmukhi",
+        "chineseName": "古木基文",
         "options": [
-            "Hallo, wie geht's?",
-            "Guten Morgen!",
-            "Wie läuft's?",
-            "Wie geht es dir?",
-            "Servus!"
+            "ਪੈਦਲ ਯਾਤਰੀ ਪਾਰਕਿੰਗ ਅੱਗੇ",
+            "ਕੋਈ ਵੀ ਸਮੇਂ ਪਾਰਕਿੰਗ ਨਹੀਂ",
+            "ਪੁਲ ਬਰਫ਼ੀਲਾ ਹੋ ਸਕਦਾ ਹੈ",
+            "ਸੱਜਾ ਲੇਨ ਮੁਕੰਮਲ ਹੋ ਰਿਹਾ ਹੈ",
+            "ਅਗਲੇ 5 ਮੀਲ ਸੜਕ ਕੰਮ",
+            "ਦਾਖਲਾ ਮਨਾਹੀ ਗਲਤ ਰਸਤਾ",
+            "ਸਿਰਫ਼ ਆਗਿਆਸ਼ੁਧ ਵਾਹਨ",
+            "ਗਿਰਦੇ ਪੱਥਰਾਂ ਤੋਂ ਸਾਵਧਾਨ",
+            "ਗਿੱਲਾ ਹੁੰਦਾ ਹੈ ਤਾਂ ਫ਼ਿਸਲਣਾ",
+            "ਟੋ ਅਵੇ ਜ਼ੋਨ",
+            "ਹਾਈਵੇ ਸੇਵਾ ਖੇਤਰ",
+            "ਅਗਲਾ ਗੈਸ ਸਟੇਸ਼ਨ 20 ਮੀਲ",
+            "ਸਪ੍ਰਿੰਗਫਿਲਡ ਵਿੱਚ ਸੁਆਗਤ ਹੈ",
+            "ਚੰਡੀਗੜ੍ਹ ਪਬਲਿਕ ਲਾਇਬ੍ਰੇਰੀ",
+            "ਅੰਮ੍ਰਿਤਸਰ ਸਿਟੀ ਹਾਲ",
+            "ਕੇਂਦਰੀ ਪਾਰਕ ਚਿੜਿਆਘਰ",
+            "ਸਾਨ ਫਰਨਾਸਿਸਕੋ ਬੇ ਇਲਾਕਾ",
+            "ਲਾਸ ਐੰਜਲਸ ਕਾਊਂਟੀ ਮਿਊਜ਼ੀਅਮ",
+            "ਸ਼ਿਕਾਗੋ ਟਰਾਂਜਿਟ ਅਥਾਰਟੀ"
         ]
     },
     {
-        "name": "Chinese",
-        "chineseName": "中文",
+        "name": "Oria",
+        "chineseName": "奥里亚语",
         "options": [
-            "你好，你怎么样？",
-            "嗨，你好吗？",
-            "早上好！",
-            "你过得怎么样？",
-            "嘿，你好！"
+            "ବାଟେ ଯିବା ପଦାତି ନାହିଁ ପର୍କିଂ",
+            "କନସଲ ରେଜର୍ଭ ବାରିଘର",
+            "ପୋଲ ଠଣ୍ଡା ହେଉଛି",
+            "ଦିୟର ଲେନ ଶେଷ",
+            "ଆଗାମୀ ୫ ମିଲ ସଡ଼କ କାମ",
+            "ଭୁଲ ରାସ୍ତା ପ୍ରବେଶ ନିଷେଧ",
+            "କେବଳ ଅନୁମୋଦିତ ଯାନବାହନ",
+            "ପଥର ପଡ଼ୁଥିବା ସତର୍କ",
+            "ଭିଜିଲେ ଫିସଲ୍",
+            "ଟୋ ଏୱେ ଜୋନ",
+            "ହାଇୱେ ସେବା କ୍ଷେତ୍ର",
+            "ନିକଟର ତେଲ ଷ୍ଟେସନ୍ ୨୦ ମିଲ",
+            "ସ୍ପ୍ରିଙ୍ଗଫିଲ୍ଡ ଲକ୍ଷ କର",
+            "ଭୁବନେଶ୍ବର ପବ୍ଲିକ ଲାଇବ୍ରେରୀ",
+            "କଟକ ସିଟି ହଲ",
+            "ମଧ୍ୟ କ୍ରୀଡ଼ାଭୂମି ଚିଡି଼ଆଘର",
+            "ସାନ ଫ୍ରାନ୍ସିସକୋ ବେ ଅଞ୍ଚଳ",
+            "ଲସ୍ ଏଞ୍ଜେଲସ୍ କାଉଣ୍ଟି ସଂଗ୍ରହାଳୟ",
+            "ସିକାଗୋ ଟ୍ରାନ୍ଜିଟ୍ ପ୍ରାଧିକାରୀ"
         ]
     },
     {
-        "name": "Japanese",
-        "chineseName": "日语",
+        "name": "Tibetan",
+        "chineseName": "藏语",
         "options": [
-            "こんにちは、お元気ですか？",
-            "やあ、どう？",
-            "おはようございます！",
-            "調子はどう？",
-            "やっほー！"
+            "གོང་འཇུག་སྒང་།",
+            "གནས་ཐོབ་ཆེད་རུ་མ་བཙུགས་།",
+            "ལོག་འགྱོ་ཟེར་པ་གཞིས་རྒྱུགས།",
+            "ཡང་ན་ཕྱི་རྒྱབ་གསར་ཐོག་ལོག་འགྱོ།",
+            "སྒོ་འགོག་ཕྱི་རྒྱབ་གཡོག་ཏོག་ལ།",
+            "འཁོར་ལོ་གཡོག་འགོག་ལོག་སྡུད་རུ།",
+            "ཡིག་ཚད་འཛིན་པ་ཅིག་རེད།",
+            "གོང་དུ་གསོག་འགྱོག",
+            "རི་རྒྱབ་ཤར་མཁན་ཨང་",
+            "ཡིག་ཚད་འཛིན་ཤར་མ",
+            "ལོག་འགྱོ་ཚུགས་ཤར་མ",
+            "སྒོ་བརྒྱ་ལྡན་གྱི་འགྲིམ་ལམ"
         ]
     },
     {
-        "name": "Russian",
-        "chineseName": "俄语",
+        "name": "Simhala",
+        "chineseName": "僧伽罗语",
         "options": [
-            "Привет, как дела?",
-            "Здравствуйте, как вы?",
-            "Привет, как ты?",
-            "Добрый день!",
-            "Привет, как настроение?"
+            "වෙරළ මාර්ගය",
+            "සෞඛ්\u200Dය සේවා මධ්\u200Dයස්ථානය",
+            "නව පාර",
+            "අවදානම් දැන්වීමක්",
+            "ගුවන් තොටුපළ පාර",
+            "කොළඹ මහ නගර සභාව",
+            "මහේෂ්වරන් වෙලඳ සංකීර්ණය",
+            "ගමන් සිංහලෙන්",
+            "නුවන් ඇල්ල",
+            "පානදුර බස් නැවතුම",
+            "බණ්ඩාරනායක ජාත්\u200Dයන්තර ගුවන් තොටුපළ"
         ]
     },
     {
-        "name": "Arabic",
-        "chineseName": "阿拉伯语",
+        "name": "Malayalam",
+        "chineseName": "马来亚拉姆语",
         "options": [
-            "مرحبا كيف حالك؟",
-            "اهلا كيفك؟",
-            "صباح الخير!",
-            "كيفك اليوم؟",
-            "مرحبا!"
+            "പാലക്കാട് റോഡ്",
+            "ആശുപത്രി",
+            "മൂനം വളവ്",
+            "വാഹനങ്ങൾ നിർത്തരുത്",
+            "എറണാകുളം ബസ് സ്റ്റാൻഡ്",
+            "തിരുവനന്തപുരം എയർപോർട്ട്",
+            "കൊച്ചി മെട്രോ",
+            "നാടുവിള കയറ്റ്",
+            "കുണ്ടന്നൂർ ബ്രിഡ്ജ്",
+            "മഞ്ചേരി മാർക്കറ്റ്",
+            "മലയാളം പുസ്തകോത്സവം",
+            "ചെങ്കോത്ത് പള്ളിയിടം",
+            "ആലപ്പുഴ ബോട്ട് ഹൗസ്"
         ]
     },
     {
-        "name": "Portuguese",
-        "chineseName": "葡萄牙语",
+        "name": "Tamil",
+        "chineseName": "泰米尔语",
         "options": [
-            "Olá, como você está?",
-            "Oi, tudo bem?",
-            "Bom dia!",
-            "Como vai você?",
-            "E aí?"
+            "சென்னை உயர் நீதிமன்றம்",
+            "மாவட்ட மருத்துவமனை",
+            "பாதசாரிகள் கடக்கும் இடம்",
+            "தடை செய்யப்பட்ட ரோடு",
+            "கோவை சாலை",
+            "மதுரை மீனாட்சி அம்மன் கோவில்",
+            "திருச்சி விமானநிலையம்",
+            "சிப்காட் தொழிற்பேட்டை",
+            "விளக்க முன்னோட்டம்",
+            "கிருஷ்ணராய புரம்",
+            "வேளச்சேரி பஸ் நிலை",
+            "கரூர் ரெயில் நிலையம்",
+            "ஈரோடு சந்தை",
+            "உடுமலை மார்க்கெட்"
         ]
     },
     {
-        "name": "Italian",
-        "chineseName": "意大利语",
+        "name": "Telugu",
+        "chineseName": "泰卢固语",
         "options": [
-            "Ciao, come stai?",
-            "Salve, tutto bene?",
-            "Buongiorno!",
-            "Come va?",
-            "Ehi, come va?"
+            "హైదరాబాదు అంతర్జాతీయ విమానాశ్రయం",
+            "విజయవాడ రైల్వే స్టేషన్",
+            "తిరుపతి దేవస్థానం",
+            "గుంటూరు మార్కెట్",
+            "పట్టణ పోలీస్ స్టేషన్",
+            "అనంతపురం బస్ స్టాండ్",
+            "రాజమండ్రి బ్రిడ్జ్",
+            "సికింద్రాబాద్ క్లాక్ టవర్",
+            "విశాఖపట్నం పోర్టు",
+            "ఖమ్మం ఫోర్ట్",
+            "కరీంనగర్ హైవే",
+            "మచిలీపట్నం బీచ్",
+            "వరంగల్ ఫోర్ట్"
         ]
     },
     {
-        "name": "Korean",
-        "chineseName": "韩语",
+        "name": "Kannada",
+        "chineseName": "卡纳达语",
         "options": [
-            "안녕하세요, 어떻게 지내세요?",
-            "안녕, 잘 지내?",
-            "좋은 아침!",
-            "어떻게 지내세요?",
-            "안녕!"
+            "ಬೆಂಗಳೂರು ವಿಮಾನ ನಿಲ್ದಾಣ",
+            "ಮೈಸೂರು ಪ್ಯಾಲೆಸ್",
+            "ಹೂಳೆತ್ತುವ ಸ್ಥಳ",
+            "ದುಂಡಿಗ ನಿವಾಸ",
+            "ಮಂಗಳೂರು ಬಂದರು",
+            "ಉಡುಪಿ ಕೃಷ್ಣ ದೇವಸ್ಥಾನ",
+            "ಕೊಪ್ಪಳ ಕೋಟೆ",
+            "ಧಾರವಾಡ ರೈಲು ನಿಲ್ದಾಣ",
+            "ಶಿವಮೊಗ್ಗ ಜಲಪಾತ",
+            "ಚಿಕ್ಕಮಗಳೂರು ಹೋಟೆಲ್",
+            "ಟಮಟೆ ಮಾರ್ಕೆಟ್",
+            "ಬೇಲೂರಿನ ದೇವಾಲಯ",
+            "ವಿಜಯಪುರ ಫೋರ್ಟು"
         ]
     },
     {
-        "name": "Hindi",
-        "chineseName": "印地语",
+        "name": "Burmese",
+        "chineseName": "缅甸语",
         "options": [
-            "नमस्ते, आप कैसे हैं?",
-            "नमस्ते, क्या हाल है?",
-            "सुप्रभात!",
-            "आप कैसे हो?",
-            "नमस्कार!"
-        ]
-    },
-    {
-        "name": "Turkish",
-        "chineseName": "土耳其语",
-        "options": [
-            "Merhaba, nasılsın?",
-            "Selam, ne haber?",
-            "Günaydın!",
-            "Nasılsın?",
-            "Merhaba, ne var ne yok?"
-        ]
-    },
-    {
-        "name": "Swedish",
-        "chineseName": "瑞典语",
-        "options": [
-            "Hej, hur mår du?",
-            "Hej, hur är läget?",
-            "God morgon!",
-            "Hur är det?",
-            "Hej där!"
-        ]
-    },
-    {
-        "name": "Dutch",
-        "chineseName": "荷兰语",
-        "options": [
-            "Hallo, hoe gaat het?",
-            "Hoi, alles goed?",
-            "Goedemorgen!",
-            "Hoe is het?",
-            "Hey, hoe gaat het?"
-        ]
-    },
-    {
-        "name": "Greek",
-        "chineseName": "希腊语",
-        "options": [
-            "Γεια σου, πώς είσαι?",
-            "Γεια, τι κάνεις?",
-            "Καλημέρα!",
-            "Πώς πάει?",
-            "Γεια σου!"
-        ]
-    },
-    {
-        "name": "Polish",
-        "chineseName": "波兰语",
-        "options": [
-            "Cześć, jak się masz?",
-            "Hej, co słychać?",
-            "Dzień dobry!",
-            "Jak leci?",
-            "Siema!"
-        ]
-    },
-    {
-        "name": "Finnish",
-        "chineseName": "芬兰语",
-        "options": [
-            "Hei, mitä kuuluu?",
-            "Moi, mitä kuuluu?",
-            "Hyvää huomenta!",
-            "Miten menee?",
-            "Hei vaan!"
-        ]
-    },
-    {
-        "name": "Thai",
-        "chineseName": "泰语",
-        "options": [
-            "สวัสดี, คุณเป็นอย่างไร?",
-            "หวัดดี, สบายดีไหม?",
-            "สวัสดีตอนเช้า!",
-            "เป็นอย่างไรบ้าง?",
-            "สวัสดีครับ/ค่ะ!"
-        ]
-    },
-    {
-        "name": "Vietnamese",
-        "chineseName": "越南语",
-        "options": [
-            "Xin chào, bạn có khỏe không?",
-            "Chào, bạn thế nào?",
-            "Chào buổi sáng!",
-            "Bạn có ổn không?",
-            "Xin chào!"
-        ]
-    },
-    {
-        "name": "Hebrew",
-        "chineseName": "希伯来语",
-        "options": [
-            "שלום, איך אתה?",
-            "היי, מה נשמע?",
-            "בוקר טוב!",
-            "מה שלומך?",
-            "היי שם!"
-        ]
-    },
-    {
-        "name": "Hungarian",
-        "chineseName": "匈牙利语",
-        "options": [
-            "Szia, hogy vagy?",
-            "Helló, hogy vagy?",
-            "Jó reggelt!",
-            "Hogy megy?",
-            "Helló!"
-        ]
-    },
-    {
-        "name": "Danish",
-        "chineseName": "丹麦语",
-        "options": [
-            "Hej, hvordan har du det?",
-            "Hej, hvad så?",
-            "Godmorgen!",
-            "Hvordan går det?",
-            "Hej hej!"
-        ]
-    },
-    {
-        "name": "Norwegian",
-        "chineseName": "挪威语",
-        "options": [
-            "Hei, hvordan har du det?",
-            "Hei, hva skjer?",
-            "God morgen!",
-            "Hvordan går det?",
-            "Hei der!"
-        ]
-    },
-    {
-        "name": "Czech",
-        "chineseName": "捷克语",
-        "options": [
-            "Ahoj, jak se máš?",
-            "Čau, co je nového?",
-            "Dobré ráno!",
-            "Jak to jde?",
-            "Nazdar!"
-        ]
-    },
-    {
-        "name": "Romanian",
-        "chineseName": "罗马尼亚语",
-        "options": [
-            "Salut, ce mai faci?",
-            "Bună, ce faci?",
-            "Bună dimineața!",
-            "Cum îți merge?",
-            "Salut!"
-        ]
-    },
-    {
-        "name": "Indonesian",
-        "chineseName": "印尼语",
-        "options": [
-            "Halo, apa kabar?",
-            "Hai, bagaimana kabarmu?",
-            "Selamat pagi!",
-            "Bagaimana kabarmu?",
-            "Hai!"
-        ]
-    },
-    {
-        "name": "Malay",
-        "chineseName": "马来语",
-        "options": [
-            "Hai, apa khabar?",
-            "Hai, apa cerita?",
-            "Selamat pagi!",
-            "Apa khabar?",
-            "Hai di sana!"
-        ]
-    },
-    {
-        "name": "Ukrainian",
-        "chineseName": "乌克兰语",
-        "options": [
-            "Привіт, як ти?",
-            "Привіт, як справи?",
-            "Доброго ранку!",
-            "Як справи?",
-            "Привіт!"
-        ]
-    },
-    {
-        "name": "Bulgarian",
-        "chineseName": "保加利亚语",
-        "options": [
-            "Здравей, как си?",
-            "Здрасти, какво става?",
-            "Добро утро!",
-            "Как върви?",
-            "Здравейте!"
-        ]
-    },
-    {
-        "name": "Croatian",
-        "chineseName": "克罗地亚语",
-        "options": [
-            "Bok, kako si?",
-            "Ćao, kako ide?",
-            "Dobro jutro!",
-            "Kako ide?",
-            "Bok!"
-        ]
-    },
-    {
-        "name": "Serbian",
-        "chineseName": "塞尔维亚语",
-        "options": [
-            "Здраво, како си?",
-            "Ћао, шта има?",
-            "Добро јутро!",
-            "Како иде?",
-            "Здраво!"
-        ]
-    },
-    {
-        "name": "Slovak",
-        "chineseName": "斯洛伐克语",
-        "options": [
-            "Ahoj, ako sa máš?",
-            "Čau, čo nové?",
-            "Dobré ráno!",
-            "Ako sa máš?",
-            "Ahoj!"
-        ]
-    },
-    {
-        "name": "Slovenian",
-        "chineseName": "斯洛文尼亚语",
-        "options": [
-            "Živjo, kako si?",
-            "Živjo, kaj dogaja?",
-            "Dobro jutro!",
-            "Kako gre?",
-            "Živjo!"
-        ]
-    },
-    {
-        "name": "Latvian",
-        "chineseName": "拉脱维亚语",
-        "options": [
-            "Sveiki, kā tev klājas?",
-            "Čau, kas jauns?",
-            "Labrīt!",
-            "Kā tev iet?",
-            "Sveiks!"
-        ]
-    },
-    {
-        "name": "Lithuanian",
-        "chineseName": "立陶宛语",
-        "options": [
-            "Labas, kaip laikaisi?",
-            "Sveiki, kas naujo?",
-            "Labas rytas!",
-            "Kaip sekasi?",
-            "Sveikas!"
-        ]
-    },
-    {
-        "name": "Estonian",
-        "chineseName": "爱沙尼亚语",
-        "options": [
-            "Tere, kuidas sul läheb?",
-            "Hei, mis uudist?",
-            "Tere hommikust!",
-            "Kuidas läheb?",
-            "Tere!"
-        ]
-    },
-    {
-        "name": "Maltese",
-        "chineseName": "马耳他语",
-        "options": [
-            "Bongu, kif int?",
-            "Ħej, x'hemm?",
-            "Bonġu!",
-            "Kif sejjer?",
-            "Ħej!"
-        ]
-    },
-    {
-        "name": "Georgian",
-        "chineseName": "格鲁吉亚语",
-        "options": [
-            "გამარჯობა, როგორ ხარ?",
-            "გამარჯობა, რა ხდება?",
-            "დილა მშვიდობისა!",
-            "როგორ მიდის?",
-            "გამარჯობა!"
-        ]
-    },
-    {
-        "name": "Armenian",
-        "chineseName": "亚美尼亚语",
-        "options": [
-            "Բարև, ինչպե՞ս ես?",
-            "Բարև, ինչ կա նոր?",
-            "Բարի առավոտ!",
-            "Ինչպես ես?",
-            "Բարև!"
-        ]
-    },
-    {
-        "name": "Azerbaijani",
-        "chineseName": "阿塞拜疆语",
-        "options": [
-            "Salam, necəsən?",
-            "Salam, nə var nə yox?",
-            "Sabahınız xeyir!",
-            "Necə gedir?",
-            "Salam!"
-        ]
-    },
-    {
-        "name": "Kazakh",
-        "chineseName": "哈萨克语",
-        "options": [
-            "Сәлем, қалайсың?",
-            "Сәлем, не жаңалық?",
-            "Қайырлы таң!",
-            "Қалайсың?",
-            "Сәлем!"
-        ]
-    },
-    {
-        "name": "Uzbek",
-        "chineseName": "乌兹别克语",
-        "options": [
-            "Salom, qalaysan?",
-            "Salom, nima yangiliklar?",
-            "Xayrli tong!",
-            "Qanday?",
-            "Salom!"
-        ]
-    },
-    {
-        "name": "Mongolian",
-        "chineseName": "蒙古语",
-        "options": [
-            "Сайн байна уу, та хэрхэн байна?",
-            "Сайн уу, юу байна?",
-            "Өглөөний мэнд!",
-            "Хэрхэн байна?",
-            "Сайн уу!"
+            "ရန်ကုန် အပြည်ပြည်ဆိုင်ရာ လေဆိပ်",
+            "မန္တလေး မင်းတုန်း ချောင်း",
+            "နေပြည်တော် ညဈေး",
+            "ပုဂံ နေဘုရား",
+            "မြဝတီ အနီးကွက်",
+            "အင်းလေးကန် ခရီးသွားစခန်း",
+            "မော်လမြိုင် ကမ်းခြေ",
+            "ပြည် အုတ်ကျင်း",
+            "ဟားခါး ဘူတာ",
+            "လှည်းတန်း စျေးကြီး",
+            "မဟာမြတ်မုနိ စေတီ",
+            "ဗားဂေါ မြို့နယ်",
+            "ဒဂုံ တက္ကသိုလ်",
+            "မြောက်ဥက္ကလာ ပင်လယ်"
         ]
     },
     {
         "name": "Khmer",
         "chineseName": "高棉语",
         "options": [
-            "សួស្តី, អ្នកសុខសប្បាយជាទេ?",
-            "សួស្តី, តើមានអ្វីថ្មី?",
-            "អរុណសួស្តី!",
-            "អ្នកមានសុខសប្បាយទេ?",
-            "សួស្តី!"
+            "ព្រះវិហារ អន្តរជាតិអាកាសយានដ្ឋាន",
+            "សៀមរាប សង្កាត់",
+            "ភ្នំកូនយល់ព្រឺព្រាត",
+            "បាត់ដំបង យានដ្ឋាន",
+            "កោះកុង ព្រំប្រទល់",
+            "កំពង់ធំ ទីផ្សារចាស់",
+            "ស្វាយរៀង បាល់ទាត់កីឡដ្ឋាន",
+            "ព្រះសីហនុ កំពង់ផែ",
+            "កំពត ម្ហូបឆ្ងាញ់",
+            "បាវិត ផ្លូវធំ",
+            "ក្រចេះ ទន្លេសាប"
+        ]
+    },
+    {
+        "name": "Thai",
+        "chineseName": "泰语",
+        "options": [
+            "สนามบินนานาชาติกรุงเทพฯ",
+            "สถานีรถไฟหัวลำโพง",
+            "วัดพระแก้ว",
+            "ตลาดน้ำดำเนินสะดวก",
+            "ศูนย์ราชการแจ้งวัฒนะ",
+            "หาดป่าตอง",
+            "อุทยานแห่งชาติแก่งกระจาน",
+            "สะพานพระราม 8",
+            "เขื่อนสิริกิติ์",
+            "อนุสาวรีย์ชัยสมรภูมิ",
+            "ถนนข้าวสาร",
+            "สวนสยาม",
+            "โรงพยาบาลศิริราช"
         ]
     },
     {
         "name": "Lao",
         "chineseName": "老挝语",
         "options": [
-            "ສະບາຍດີ, ເຈົ້າເປັນແນວໃດ?",
-            "ສະບາຍດີ, ມີຫຍັງໃໝ່?",
-            "ສະບາຍດີຕອນເຊົ້າ!",
-            "ເຈົ້າມີສຸຂສະບາຍດີບໍ?",
-            "ສະບາຍດີ!"
+            "ສະຫານ ນາຊາດ ວຽງຈັນ",
+            "ຂົນສົ່ງ ລົດໄຟ ປາກເພັງ",
+            "ວັດພູ",
+            "ຕະຫຼາດ ຊາວຮ່ອມ",
+            "ໂຮງໝໍ ເຊີນໄຫ້",
+            "ທ່າເຮືອ ສີໂຄດຕະບອນ",
+            "ປະຕູໄຊ",
+            "ແມ່ນ້ຳ ຂອງ",
+            "ຖະໜົນ ເສັ້ນທາງໃຫຍ່",
+            "ວິທະຍາຄານ ລາວ",
+            "ພຣະທາດ ເຫົາພັນ",
+            "ຫ້ອງການ ລາຊາສະໝຸດ",
+            "ເຂື່ອນ ນໍ້າພັກ",
+            "ປະຊາຄົມ ເຕັກໂນໂລຊີ"
         ]
     },
     {
-        "name": "Sinhala",
-        "chineseName": "僧伽罗语",
+        "name": "Balinese",
+        "chineseName": "巴厘语",
         "options": [
-            "ආයුබෝවන්, ඔබට කෙසේද?",
-            "ආයුබෝවන්, මොකක්ද?",
-            "සුභ උදෑසනක්!",
-            "ඔබට කොහොමද?",
-            "ආයුබෝවන්!"
+            "Bandara Internasional Ngurah Rai",
+            "Pura Besakih",
+            "Pantai Kuta",
+            "Pasar Ubud",
+            "Gunung Agung",
+            "Desa Penglipuran",
+            "Danau Batur",
+            "Museum Bali",
+            "Taman Nasional Bali Barat",
+            "Sawah Terasering Tegalalang",
+            "Pusat Kerajinan Celuk",
+            "Hutan Monyet Ubud",
+            "Pantai Sanur"
         ]
     },
     {
-        "name": "Pashto",
-        "chineseName": "普什图语",
+        "name": "Javanese",
+        "chineseName": "爪哇语",
         "options": [
-            "سلام، ته څنګه یې؟",
-            "سلام، څه خبرونه دي؟",
-            "سهار مو پخير!",
-            "څنګه يې؟",
-            "سلام!"
+            "Bandara Internasional Soekarno-Hatta",
+            "Stasiun Kereta Api Yogyakarta",
+            "Candi Borobudur",
+            "Pasar Klewer",
+            "Gunung Merapi",
+            "Kraton Surakarta",
+            "Pantai Parangtritis",
+            "Alun-Alun Kidul",
+            "Malioboro",
+            "Keraton Yogyakarta",
+            "Taman Sari",
+            "Monumen Nasional",
+            "Masjid Istiqlal"
         ]
     },
     {
-        "name": "Ukrainian",
-        "chineseName": "乌克兰语",
+        "name": "Sundanese",
+        "chineseName": "巽他语",
         "options": [
-            "Привіт, як ти?",
-            "Привіт, що нового?",
-            "Доброго ранку!",
-            "Як справи?",
-            "Привіт!"
+            "Bandara Husein Sastranegara",
+            "Stasion Bandung",
+            "Gunung Tangkuban Perahu",
+            "Pasar Baru",
+            "Kawah Putih Ciwidey",
+            "Situ Patenggang",
+            "Gedung Sate",
+            "Alun-Alun Bandung",
+            "Trans Studio Bandung",
+            "Saung Angklung Udjo",
+            "Pantai Pangandaran",
+            "Curug Dago",
+            "Lembang",
+            "Ciater Hot Spring"
+        ]
+    },
+    {
+        "name": "Spanish",
+        "chineseName": "西班牙语",
+        "options": [
+            "¡Cuidado, Cruce de Peatones!",
+            "Prohibido Estacionar en Todo Momento",
+            "Puente Puede Estar Resbaladizo",
+            "Carril Termina, Fusión a la Izquierda",
+            "Obras en la Carretera Próximos 8 Kilómetros",
+            "Entrada Prohibida, Sentido Contrario",
+            "Sólo Vehículos Autorizados",
+            "Precaución, Desprendimiento de Rocas",
+            "Resbaladizo Cuando Está Mojado",
+            "Zona de Remolque",
+            "Área de Servicio en la Autopista",
+            "Próxima Gasolinera a 20 Kilómetros",
+            "Bienvenidos a Madrid",
+            "Biblioteca Nacional de España",
+            "Ayuntamiento de Barcelona",
+            "Parque del Retiro"
+        ]
+    },
+    {
+        "name": "French",
+        "chineseName": "法语",
+        "options": [
+            "Passage Piétons à Proximité",
+            "Stationnement Interdit Tout le Temps",
+            "Pont Peut Être Glissant",
+            "Voie Se Termine, Fusionnez à Gauche",
+            "Travaux sur la Route Prochaîne 8 Kilomètres",
+            "Accès Interdit, Sens Interdit",
+            "Véhicules Autorisés Seulement",
+            "Attention, Chute de Roches",
+            "Glissant Quand Humide",
+            "Zone d'Enlèvement",
+            "Aire de Service sur l'Autoroute",
+            "Prochaine Station-Service à 20 Kilomètres",
+            "Bienvenue à Paris",
+            "Bibliothèque Nationale de France",
+            "Hôtel de Ville de Lyon",
+            "Jardin du Luxembourg"
+        ]
+    },
+    {
+        "name": "Italian",
+        "chineseName": "意大利语",
+        "options": [
+            "Attraversamento Pedonale Avanti",
+            "Divieto di Parcheggio Sempre",
+            "Ponte Può Essere Scivoloso",
+            "Corsia Finisce, Fusione a Sinistra",
+            "Lavori Stradali Prossimi 8 Chilometri",
+            "Ingresso Vietato, Senso Unico",
+            "Solo Veicoli Autorizzati",
+            "Attenzione, Caduta Massi",
+            "Scivoloso Quando Bagnato",
+            "Zona di Rimozione",
+            "Area di Servizio in Autostrada",
+            "Prossima Stazione di Servizio a 20 Chilometri",
+            "Benvenuti a Roma",
+            "Biblioteca Nazionale Centrale di Firenze",
+            "Municipio di Milano",
+            "Giardino di Boboli"
+        ]
+    },
+    {
+        "name": "English",
+        "chineseName": "英语",
+        "options": [
+            "Pedestrian Crossing Ahead",
+            "No Parking Anytime",
+            "Bridge May Be Icy",
+            "Lane Ends Merge Left",
+            "Road Work Next 5 Miles",
+            "Do Not Enter Wrong Way",
+            "Authorized Vehicles Only",
+            "Watch for Falling Rocks",
+            "Slippery When Wet",
+            "Tow Away Zone",
+            "Highway Service Area",
+            "Next Gas Station 20 Miles",
+            "Welcome to New York",
+            "New York Public Library",
+            "Boston City Hall",
+            "Golden Gate Park"
+        ]
+    },
+    {
+        "name": "Dutch",
+        "chineseName": "荷兰语",
+        "options": [
+            "Voetgangersoversteekplaats Vooruit",
+            "Verboden te Parkeren Altijd",
+            "Brug Kan Glad Zijn",
+            "Rijbaan Eindigt, Invoegen naar Links",
+            "Wegwerkzaamheden Volgende 8 Kilometer",
+            "Verboden Toegang, Verkeerde Richting",
+            "Alleen Bevoegde Voertuigen",
+            "Pas Op, Vallende Stenen",
+            "Glad Bij Natte Weersomstandigheden",
+            "Wegsleepzone",
+            "Wegrestaurant Bij de Snelweg",
+            "Volgend Tankstation Over 20 Kilometer",
+            "Welkom in Amsterdam",
+            "Nationale Bibliotheek van Nederland",
+            "Stadhuis van Rotterdam",
+            "Vondelpark"
+        ]
+    },
+    {
+        "name": "German",
+        "chineseName": "德语",
+        "options": [
+            "Fußgängerüberweg Voraus",
+            "Parken Jederzeit Verboten",
+            "Brücke Kann Glatt Sein",
+            "Fahrbahn Endet, Links Einordnen",
+            "Straßenbau auf den Nächsten 8 Kilometern",
+            "Einfahrt Verboten, Falsche Richtung",
+            "Nur Berechtigte Fahrzeuge",
+            "Vorsicht, Steinschlag",
+            "Rutschgefahr bei Nässe",
+            "Abschleppzone",
+            "Raststätte an der Autobahn",
+            "Nächste Tankstelle in 20 Kilometern",
+            "Willkommen in Berlin",
+            "Deutsche Nationalbibliothek",
+            "Rathaus München",
+            "Englischer Garten"
+        ]
+    },
+    {
+        "name": "Swedish",
+        "chineseName": "瑞典语",
+        "options": [
+            "Gångövergång Framåt",
+            "Parkering Förbjuden När Som Helst",
+            "Bron Kan Vara Hal",
+            "Filen Slutar, Fäll In till Vänster",
+            "Vägarbete Nästa 8 Kilometer",
+            "Infart Förbjuden, Fel Riktning",
+            "Endast Behöriga Fordon",
+            "Se Upp för Fallande Stenar",
+            "Halt När Det Är Blött",
+            "Bortforslingszon",
+            "Rastplats Vid Motorvägen",
+            "Nästa Bensinstation om 20 Kilometer",
+            "Välkommen till Stockholm",
+            "Kungliga Biblioteket",
+            "Stockholms Stadshus",
+            "Djurgården"
+        ]
+    },
+    {
+        "name": "Danish",
+        "chineseName": "丹麦语",
+        "options": [
+            "Fodgængerovergang Foran",
+            "Parkering Forbudt Til Enhver Tid",
+            "Broen Kan Være Glat",
+            "Vognbane Slutter, Flet til Venstre",
+            "Vejarbejde Næste 8 Kilometer",
+            "Adgang Forbudt, Forkert Retning",
+            "Kun Autoriserede Køretøjer",
+            "Pas på, Faldende Sten",
+            "Glat Når Vådt",
+            "Slæbeområde",
+            "Rasteplads på Motorvejen",
+            "Næste Tankstation om 20 Kilometer",
+            "Velkommen til København",
+            "Danmarks Nationalbibliotek",
+            "Københavns Rådhus",
+            "Tivoli"
+        ]
+    },
+    {
+        "name": "Norwegian",
+        "chineseName": "挪威语",
+        "options": [
+            "Gangfelt Fremover",
+            "Parkering Forbudt Når Som Helst",
+            "Bro Kan Være Glatt",
+            "Kjørefelt Slutter, Flett til Venstre",
+            "Veiarbeid Neste 8 Kilometer",
+            "Adgang Forbudt, Feil Retning",
+            "Kun Autoriserte Kjøretøy",
+            "Pass Opp for Fallende Steiner",
+            "Glatt Når Våt",
+            "Tauingssone",
+            "Rasteplass ved Motorveien",
+            "Neste Bensinstasjon om 20 Kilometer",
+            "Velkommen til Oslo",
+            "Nasjonalbiblioteket",
+            "Oslo Rådhus",
+            "Frognerparken"
+        ]
+    },
+    {
+        "name": "Icelandic",
+        "chineseName": "冰岛语",
+        "options": [
+            "Gangbraut Framundan",
+            "Engin Bílastæði Allan Tíma",
+            "Brú Getur Verið Sleip",
+            "Akrein Endar, Sameinist til Vinstri",
+            "Vegavinna Næstu 8 Kílómetrana",
+            "Innkeyrsla Bönnuð, Röng Átt",
+            "Aðeins Heimilaðir Bílar",
+            "Varúð, Fallandi Grjót",
+            "Sleipt Þegar Blautt",
+            "Dráttarvæði",
+            "Þjónustusvæði við Hraðbraut",
+            "Næsta Bensínstöð eftir 20 Kílómetra",
+            "Velkomin til Reykjavíkur",
+            "Landsbókasafn Íslands",
+            "Ráðhús Reykjavíkur",
+            "Viðeyjar"
+        ]
+    },
+    {
+        "name": "Faroese",
+        "chineseName": "法罗语",
+        "options": [
+            "Gøtubreyt Frammi",
+            "Parkering Forboðað Hvørja Tíð",
+            "Brú Kann Vera Glíggur",
+            "Akbraut Endar, Sameinast til Vinstru",
+            "Vegarbeiði Næstu 8 Kilometrar",
+            "Ikki Inngangur, Skeiv Leið",
+            "Bert Loyvd Akfør",
+            "Ávaring, Steinur Faldar",
+            "Slítt Tá Vátt",
+            "Dráttsomráði",
+            "Tænastaøki við Motorveg",
+            "Næsta Bensinstøð um 20 Kilometrar",
+            "Vælkomin til Tórshavn",
+            "Landsbókasavnið",
+            "Tórshavnar Býarstýri",
+            "Viðarlundin"
+        ]
+    },
+    {
+        "name": "Afrikaans",
+        "chineseName": "南非荷兰语",
+        "options": [
+            "Voetganger Oorgang Vooruit",
+            "Geen Parkering Enige Tyd Nie",
+            "Brug Kan Glad Wees",
+            "Baan Eindig, Saamvoeg Links",
+            "Padwerk Volgende 8 Kilometer",
+            "Toegang Verbode, Verkeerde Rigting",
+            "Slegs Gemagtigde Voertuie",
+            "Pasop, Vallende Klippe",
+            "Gly As Nat",
+            "Sleep Weg Sone",
+            "Diensarea by Snelweg",
+            "Volgende Vulstasie oor 20 Kilometer",
+            "Welkom by Kaapstad",
+            "Nasionale Biblioteek van Suid-Afrika",
+            "Kaapstad Stadhuis",
+            "Kirstenbosch Botaniese Tuine"
+        ]
+    },
+    {
+        "name": "Latvian",
+        "chineseName": "拉脱维亚语",
+        "options": [
+            "Gājēju Pāreja Priekšā",
+            "Nav Atļauta Stāvēšana Jebkurā Laikā",
+            "Tilts Var Būt Slidens",
+            "Josla Beidzas, Apvienojieties Pa Kreisi",
+            "Ceļa Darbi Nākamos 8 Kilometrus",
+            "Iebraukšana Aizliegta, Nepareizs Virziens",
+            "Tikai Atļautās Transporta Līdzekļi",
+            "Uzmanību, Krītoši Akmeņi",
+            "Slidens, Kad Slapjš",
+            "Vilkšanas Zona",
+            "Ceļa Pakalpojumu Zonas",
+            "Nākamā Degvielas Uzpildes Stacija pēc 20 Kilometriem",
+            "Laipni Lūdzam Rīgā",
+            "Latvijas Nacionālā Bibliotēka",
+            "Rīgas Pilsētas Dome",
+            "Mežaparks"
+        ]
+    },
+    {
+        "name": "Lithuanian",
+        "chineseName": "立陶宛语",
+        "options": [
+            "Pėsčiųjų Perėja Priekyje",
+            "Draudžiama Statyti Bet Kada",
+            "Tiltas Gali Būti Slydus",
+            "Juosta Baigiasi, Susijunkite į Kairę",
+            "Kelio Darbai Per Artimiausius 8 Kilometrus",
+            "Įvažiavimas Draudžiamas, Klaidinga Kryptis",
+            "Tik Leidžiami Automobiliai",
+            "Atsargiai, Krintantys Akmenys",
+            "Slidu, Kai Šlapia",
+            "Nutempimo Zona",
+            "Kelio Paslaugų Zona",
+            "Kita Degalinė po 20 Kilometrų",
+            "Sveiki atvykę į Vilnių",
+            "Lietuvos Nacionalinė Biblioteka",
+            "Vilniaus Miesto Savivaldybė",
+            "Vingio Parkas"
+        ]
+    },
+    {
+        "name": "Polish",
+        "chineseName": "波兰语",
+        "options": [
+            "Przejście Dla Pieszych Przed Tobą",
+            "Zakaz Parkowania W Każdym Czasie",
+            "Most Może Być Śliski",
+            "Pas Kończy Się, Połącz Się W Lewo",
+            "Roboty Drogowe Na Najbliższych 8 Kilometrach",
+            "Wjazd Wzbroniony, Zły Kierunek",
+            "Tylko Pojazdy Upoważnione",
+            "Uwaga, Spadające Kamienie",
+            "Ślisko Kiedy Mokro",
+            "Strefa Holowania",
+            "Obszar Usługowy Przy Autostradzie",
+            "Następna Stacja Paliw Za 20 Kilometrów",
+            "Witamy w Warszawie",
+            "Biblioteka Narodowa Polski",
+            "Urząd Miasta Warszawa",
+            "Łazienki Królewskie"
+        ]
+    },
+    {
+        "name": "Czech",
+        "chineseName": "捷克语",
+        "options": [
+            "Přechod Pro Chodce Před Vámi",
+            "Zákaz Parkování Kdykoli",
+            "Most Může Být Kluzký",
+            "Pravý Pruh Končí, Spojte Se Vlevo",
+            "Silniční Práce Na Dalších 8 Kilometrech",
+            "Vjezd Zakázán, Špatný Směr",
+            "Pouze Povolena Vozidla",
+            "Pozor, Padající Kameny",
+            "Kluzké Když Mokré",
+            "Oblast Odtažení",
+            "Servisní Oblast Na Dálnici",
+            "Další Čerpací Stanice Za 20 Kilometrů",
+            "Vítejte V Praze",
+            "Národní Knihovna České Republiky",
+            "Magistrát Hlavního Města Prahy",
+            "Stromovka Park"
+        ]
+    },
+    {
+        "name": "Slovak",
+        "chineseName": "斯洛伐克语",
+        "options": [
+            "Prechod Pre Chodcov Pred Tebou",
+            "Zákaz Parkovania Kedykoľvek",
+            "Most Môže Byť Klzký",
+            "Pravý Pruh Končí, Spojte Sa Vľavo",
+            "Cestné Práce Na Najbližších 8 Kilometroch",
+            "Vjazd Zakázaný, Zlý Smer",
+            "Iba Povolene Vozidlá",
+            "Pozor, Padajúce Kamene",
+            "Šmykľavé Keď Mokré",
+            "Zóna Odťahu",
+            "Služobná Zóna Pri Diaľnici",
+            "Ďalšia Čerpacia Stanica Po 20 Kilometroch",
+            "Vitajte V Bratislave",
+            "Národná Knižnica Slovenska",
+            "Magistrát Hlavného Mesta Bratislavy",
+            "Horský Park"
+        ]
+    },
+    {
+        "name": "Croatian",
+        "chineseName": "克罗地亚语",
+        "options": [
+            "Pješački Prijelaz Ispred",
+            "Zabranjeno Parkiranje U Bilo Koje Vrijeme",
+            "Most Može Biti Klizav",
+            "Traka Završi, Spojite Se Lijevo",
+            "Radovi Na Cesti Sljedećih 8 Kilometara",
+            "Ulaz Zabranjen, Pogrešan Smjer",
+            "Samo Ovlaštena Vozila",
+            "Upozorenje, Padajuće Kamenje",
+            "Klizavo Kad Mokro",
+            "Zona Vučnog Vozila",
+            "Područje Usluga Na Autocesti",
+            "Sljedeća Benzinska Stanica Za 20 Kilometara",
+            "Dobrodošli U Zagreb",
+            "Nacionalna Knjižnica Hrvatske",
+            "Gradska Uprava Zagreba",
+            "Maksimir Park"
+        ]
+    },
+    {
+        "name": "Serbian (Latin script)",
+        "chineseName": "塞尔维亚语（拉丁文字书写）",
+        "options": [
+            "Pešački Prelaz Ispred",
+            "Zabranjeno Parkiranje U Bilo Koje Vreme",
+            "Most Može Biti Klizav",
+            "Traka Završi, Spojite Se Levo",
+            "Radovi Na Putu U Sledećih 8 Kilometara",
+            "Ulaz Zabranjen, Pogrešan Smer",
+            "Samo Ovlašćena Vozila",
+            "Upozorenje, Padajuće Kamenje",
+            "Klizavo Kada Je Mokro",
+            "Zona Vučnog Vozila",
+            "Područje Usluga Na Autoputu",
+            "Sledeća Benzinska Pumpa Za 20 Kilometara",
+            "Dobrodošli U Beograd",
+            "Narodna Biblioteka Srbije",
+            "Skupština Grada Beograda",
+            "Tašmajdan Park"
+        ]
+    },
+    {
+        "name": "Welsh (Cymraeg)",
+        "chineseName": "威尔士语",
+        "options": [
+            "Mae Cerddwyr Yn Croesi",
+            "Gwaharddiad Parcio Ar Unrhyw Amser",
+            "Gall Y Bont Fod Yn Llithrig",
+            "Terfynu Llain, Uno I’r Chwith",
+            "Gwaith Ffyrdd Am 8 Cilometr Nesaf",
+            "Dim Mynediad, Cyfeiriad Anghywir",
+            "Cerbydau Awdurdodedig Yn Unig",
+            "Rhybudd, Cerrig Yn Syrthio",
+            "Llithrig Pan Yn Wlyb",
+            "Ardal Tynnu Cerbydau",
+            "Ardal Gwasanaeth Ar Yr Autostrade",
+            "Gorsaf Danwydd Nesaf Wedi 20 Cilometr",
+            "Croeso I Gaerdydd",
+            "Llyfrgell Genedlaethol Cymru",
+            "Cyngor Dinas Caerdydd",
+            "Parc Bute"
+        ]
+    },
+    {
+        "name": "Irish (Gaeilge)",
+        "chineseName": "爱尔兰语",
+        "options": [
+            "Trasrian Coisithe Romhat",
+            "Cosc Páirceála Ag Am Ar Bith",
+            "D’fhéadfadh An Droichead A Bheith Sleamhain",
+            "Tá An Lána Deas Á Chríochnú, Ceangail Ar Chlé",
+            "Obair Bhóthair Ar Aghaidh Don 8 gCiliméadar",
+            "Cosc Isteach, Treo Mícheart",
+            "Feithiclí Údaraithe Amháin",
+            "Rabhadh, Clocha Ag Titim",
+            "Sleamhain Nuair A Bíonn Sé Fliuch",
+            "Ceantar Tógála Feithicle",
+            "Ceantar Seirbhíse Ar An Mhótarbhealach",
+            "An Stáisiún Breosla Eile Tar Éis 20 Ciliméadar",
+            "Fáilte Go BÁC",
+            "Leabharlann Náisiúnta na hÉireann",
+            "Comhairle Cathrach Bhaile Átha Cliath",
+            "Páirc an Fhionnuisce"
+        ]
+    },
+    {
+        "name": "Scottish Gaelic (Gàidhlig)",
+        "chineseName": "苏格兰盖尔语",
+        "options": [
+            "Àite-Coiseachd Ron T-Sràid",
+            "Casg Parcaidh Aig Àm Sam Bith",
+            "Dh’fhaodadh An Drochaid A Bhith Sleamhainn",
+            "Tha An Làn Dèis A’ Crìochnachadh, Ceangail Chun Chlì",
+            "Obair Rathaidean Airson 8 Cilemeatair Air Adhart",
+            "Casg A-steach, Stiùireadh Ceàrr",
+            "A-mhàin Airson Carbadan Ùghdarraichte",
+            "Rabhadh, Clachan A’ Tuiteam",
+            "Sleamhainn Nuair a Tha I Fliuch",
+            "Sgìre Tarraing Charbadan",
+            "Sgìre Seirbheis Air An Autostrada",
+            "An Ath Stèisean-Ceithir An Dèidh 20 Cilemeatair",
+            "Fàilte Gu Dùn Èideann",
+            "Leabharlann Nàiseanta na h-Alba",
+            "Comhairle Baile Dhùn Èideann",
+            "Pàirc na Cloinne"
+        ]
+    },
+    {
+        "name": "Finnish",
+        "chineseName": "芬兰语",
+        "options": [
+            "Jalankulkijan Ylitys Kohta Edessä",
+            "Pysäköintikielto Koskee Aina",
+            "Silta Voi Olla Liukas",
+            "Kaista Päättyy, Liity Vasemmalle",
+            "Tietyö Seuraavan 8 Kilometrin Matkalla",
+            "Ei Sisäänpääsyä, Väärä Suunta",
+            "Vain Valtuutetut Ajoneuvot",
+            "Varoitus, Putoavia Kiviä",
+            "Liukas Kun Märkä",
+            "Ajoneuvojen Hinattava Alue",
+            "Moottoritien Palvelualue",
+            "Seuraava Huoltoasema 20 Kilometrin Päässä",
+            "Tervetuloa Helsinkiin",
+            "Suomen Kansalliskirjasto",
+            "Helsingin Kaupungintalo",
+            "Kaivopuiston Puisto"
+        ]
+    },
+    {
+        "name": "Estonian",
+        "chineseName": "爱沙尼亚语",
+        "options": [
+            "Jalakäijate Ülekäigurada",
+            "Parkimiskeeld Igal Ajal",
+            "Sild Võib Olla Libe",
+            "Rada Lõpeb, Ühendu Vasakule",
+            "Teetööd Järgmised 8 Kilomeetrit",
+            "Sissepääs Keelatud, Vale Suund",
+            "Ainult Volitatud Sõidukid",
+            "Hoiatus, Langevad Kivid",
+            "Libe Kui Märg",
+            "Tõmmitsasõiduki Piirkond",
+            "Maanteeteeninduspiirkond",
+            "Järgmine Kütusejaam 20 Kilomeetri Pärast",
+            "Tere Tulemast Tallinnasse",
+            "Eesti Rahvusraamatukogu",
+            "Tallinna Linnavalitsus",
+            "Kadrioru Park"
+        ]
+    },
+    {
+        "name": "Hungarian",
+        "chineseName": "匈牙利语",
+        "options": [
+            "Gyalogátkelőhely",
+            "Bármikor Tiltott Parkolás",
+            "A Híd Csúszós Lehet",
+            "A Sáv Véget Ér, Kapcsolódjon Balra",
+            "Útmunkálatok A Következő 8 Kilométeren",
+            "Belépés Megtiltva, Rossz Irány",
+            "Csak Meghatalmazott Járművek",
+            "Figyelem, Lehulló Kövek",
+            "Csúszós, Ha Nedves",
+            "Járművontatási Zóna",
+            "Autópálya Szolgáltató Terület",
+            "Következő Benzinkút 20 Kilométerre",
+            "Üdvözöljük Budapesten",
+            "Magyar Nemzeti Könyvtár",
+            "Budapesti Városháza",
+            "Városliget"
+        ]
+    },
+    {
+        "name": "Turkish",
+        "chineseName": "土耳其语",
+        "options": [
+            "Yaya Geçidi",
+            "Park Yasağı Her Zaman Geçerli",
+            "Köprü Kaygan Olabilir",
+            "Şerit Bitiyor, Sola Bağlan",
+            "Yol Çalışması 8 Kilometre Boyunca",
+            "Giriş Yasak, Yanlış Yön",
+            "Sadece Yetkili Araçlar",
+            "Dikkat, Düşen Taşlar",
+            "Islakken Kaygan",
+            "Çekme Alanı",
+            "Otoyol Hizmet Alanı",
+            "Sonraki Akaryakıt İstasyonu 20 Kilometre Sonra",
+            "İstanbul’a Hoş Geldiniz",
+            "Türkiye Milli Kütüphanesi",
+            "İstanbul Büyükşehir Belediyesi",
+            "Gülhane Parkı"
+        ]
+    },
+    {
+        "name": "Malay/Indonesian",
+        "chineseName": "马来/印尼语",
+        "options": [
+            "Lintasan Pejalan Kaki",
+            "Larangan Parkir Sepanjang Masa",
+            "Jambatan Mungkin Licin",
+            "Lorong Tamat, Gabung ke Kiri",
+            "Kerja Jalan Untuk 8 Kilometer Berikut",
+            "Masuk Dilarang, Arah Salah",
+            "Hanya Untuk Kenderaan Berkuasa",
+            "Awas, Batu Jatuh",
+            "Licin Ketika Basah",
+            "Zon Penarikan Kenderaan",
+            "Kawasan Perkhidmatan Lebuhraya",
+            "Stesen Minyak Seterusnya 20 Kilometer Lagi",
+            "Selamat Datang ke Kuala Lumpur",
+            "Perpustakaan Negara Malaysia",
+            "Dewan Bandaraya Kuala Lumpur",
+            "Taman KLCC"
+        ]
+    },
+    {
+        "name": "Albanian",
+        "chineseName": "阿尔巴尼亚语",
+        "options": [
+            "Kalimi i Këmbësorëve",
+            "Ndalimi i Parkimit Gjithmonë në Fuqi",
+            "Ura Mund të Jetë e Rrëshqitshme",
+            "Korsia Po Mbaron, Lidhu Majtas",
+            "Punime Rrugore Për 8 Kilometrat e Ardhshëm",
+            "Ndalimi i Hyrjes, Drejtim i Gabuar",
+            "Vetëm Për Automjete të Autorizuara",
+            "Paralajmërim, Gurë që Bien",
+            "Rrëshqitshme Kur Është Lagësht",
+            "Zona e Tërheqjes së Automjeteve",
+            "Zona e Shërbimit të Autostradës",
+            "Stacioni i Karburantit Pas 20 Kilometrash",
+            "Mirësevini në Tiranë",
+            "Biblioteka Kombëtare e Shqipërisë",
+            "Bashkia e Tiranës",
+            "Parku i Madh i Tiranës"
+        ]
+    },
+    {
+        "name": "Maltese",
+        "chineseName": "马耳他语",
+        "options": [
+            "Attraversament tal-Pedoni",
+            "Projbizzjoni tal-Parcheġġ Dejjem Fil-Post",
+            "Il-Pont Jista' Jiġi Perikoluż",
+            "Il-Korsija qed Tispiċċa, Ingħaqad Max-Xellug",
+            "Xogħlijiet tat-Triq Għal 8 Kilometri li Ġejjin",
+            "Daħla Projbita, Direzzjoni Żbaljata",
+            "Vetturi Awtorizzati Biss",
+            "Twissija, Ġebel Li Jaħbat",
+            "Jista' Jiżloq Meta Mxarrba",
+            "Żona tat-Trazzjoni tal-Vetturi",
+            "Żona ta' Servizz fuq l-Autostrada",
+            "Stazzjon tal-Petrol F'20 Kilometru",
+            "Merħba fil-Belt Valletta",
+            "Il-Librerija Nazzjonali ta' Malta",
+            "Il-Kunsill Lokali ta' Valletta",
+            "Il-Ġnien tal-Barrakka ta' Fuq"
+        ]
+    },
+    {
+        "name": "Greenlandic",
+        "chineseName": "格陵兰语言",
+        "options": [
+            "Angallannermut Aqqusinertalik",
+            "Aqqusinermi Unittariaqarneq",
+            "Qatsernermi Ukkusisserneq",
+            "Qasigiarneq, Qimmussianik Imaatiginninneq",
+            "Suliat Aqqusinermi 8 Kiiluutimi Atorunartikkit",
+            "Qisuminermik Aqqusinermut Tikkinneq",
+            "Kivissikkuminarneq",
+            "Issittoq Kigaatsumik",
+            "Qaqittaarneq Qimatinnassaat",
+            "Akuttut Aqqusinerigassat",
+            "Napparsimmavik 20 Kilometrimit",
+            "Tikilluarit Nuukimut",
+            "Kalaallit Nunaat Qaanaami Atuarfiat",
+            "Nuuk Illulikkut Illorsuit",
+            "Pisortat Ingerlarsimaffiat Pisuttarfik"
+        ]
+    },
+    {
+        "name": "Vietnamese",
+        "chineseName": "越南语",
+        "options": [
+            "Lối Băng Qua Đường Cho Người Đi Bộ",
+            "Cấm Đỗ Xe Mọi Lúc",
+            "Cầu Có Thể Trơn",
+            "Làn Đường Kết Thúc, Hợp Nhất Về Bên Trái",
+            "Công Trình Đường Bộ Trong 8 Kilômét Tiếp Theo",
+            "Cấm Nhập, Hướng Sai",
+            "Chỉ Dành Cho Các Phương Tiện Được Ủy Quyền",
+            "Cảnh Báo, Đá Rơi",
+            "Trơn Trượt Khi Ẩm Ướt",
+            "Khu Vực Kéo Xe",
+            "Khu Dịch Vụ Đường Cao Tốc",
+            "Trạm Xăng Tiếp Theo Sau 20 Kilômét",
+            "Chào Mừng Đến Với Hà Nội",
+            "Thư Viện Quốc Gia Việt Nam",
+            "Tòa Thị Chính Hà Nội",
+            "Công Viên Bách Thảo"
+        ]
+    },
+    {
+        "name": "Azerbaijani",
+        "chineseName": "阿塞拜疆语",
+        "options": [
+            "Piyadalar Keçidi",
+            "Həmişə Keçərli Dayanacaq Qadağası",
+            "Körpü Sürüşkən Ola Bilər",
+            "Zolaq Bitir, Sola Qoşul",
+            "Yol İşləri Növbəti 8 Kilometrdə",
+            "Giriş Qadağandır, Yanlış İstiqamət",
+            "Yalnız İcazəli Nəqliyyat Vasitələri",
+            "Diqqət, Düşən Daşlar",
+            "Nəm Olarkən Sürüşkəndir",
+            "Çəkmə Zonasına",
+            "Avtomobil Yolu Xidməti Bölgəsi",
+            "Növbəti Yanacaqdoldurma Məntəqəsi 20 Kilometrdədir",
+            "Bakıya Xoş Gəlmişsiniz",
+            "Azərbaycan Milli Kitabxanası",
+            "Bakı Şəhər İcra Hakimiyyəti",
+            "Dağüstü Park"
+        ]
+    },
+    {
+        "name": "Japanese",
+        "chineseName": "日语",
+        "options": [
+            "横断歩道",
+            "駐車禁止",
+            "橋は滑りやすい",
+            "車線終了、左に合流",
+            "次の8キロメートルで道路工事中",
+            "進入禁止、逆走",
+            "許可された車両のみ",
+            "注意、落石あり",
+            "濡れると滑りやすい",
+            "牽引エリア",
+            "高速道路サービスエリア",
+            "次のガソリンスタンドまで20キロメートル",
+            "ようこそ東京へ",
+            "国立国会図書館",
+            "東京都庁",
+            "上野恩賜公園"
+        ]
+    },
+    {
+        "name": "Korean",
+        "chineseName": "韩语",
+        "options": [
+            "횡단보도",
+            "주차 금지",
+            "다리가 미끄러울 수 있음",
+            "차선 종료, 좌측으로 합류",
+            "다음 8킬로미터 동안 도로 공사 중",
+            "진입 금지, 역주행",
+            "허가된 차량만",
+            "주의, 낙석 위험",
+            "젖으면 미끄러움",
+            "견인 구역",
+            "고속도로 서비스 구역",
+            "다음 주유소까지 20킬로미터",
+            "서울에 오신 것을 환영합니다",
+            "국립중앙도서관",
+            "서울특별시청",
+            "서울숲공원"
+        ]
+    },
+    {
+        "name": "Chinese (Simplified)",
+        "chineseName": "中文（简体）",
+        "options": [
+            "人行横道",
+            "禁止停车",
+            "桥面可能打滑",
+            "车道结束，左侧并道",
+            "前方8公里道路施工",
+            "禁止进入，方向错误",
+            "仅限授权车辆",
+            "注意，落石",
+            "湿滑路段",
+            "拖车区域",
+            "高速公路服务区",
+            "下一个加油站距此20公里",
+            "欢迎来到北京",
+            "中国国家图书馆",
+            "北京市政府",
+            "北京颐和园"
+        ]
+    },
+    {
+        "name": "Chinese (Traditional)",
+        "chineseName": "中文（繁体）",
+        "options": [
+            "人行橫道",
+            "禁止停車",
+            "橋面可能打滑",
+            "車道結束，左側並道",
+            "前方8公里道路施工",
+            "禁止進入，方向錯誤",
+            "僅限授權車輛",
+            "注意，落石",
+            "濕滑路段",
+            "拖車區域",
+            "高速公路服務區",
+            "下一個加油站距此20公里",
+            "歡迎來到台北",
+            "國立中央圖書館",
+            "台北市政府",
+            "台北故宮博物院"
         ]
     }
 ]

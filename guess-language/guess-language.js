@@ -1,132 +1,133 @@
 import { incrementScore, resetScore } from '../utils.js';
 
-let languages = [];
-let currentQuestionIndex = 0;
-let score = 0;
-
-const questionElement = document.getElementById('question');
-const optionsContainer = document.getElementById('options-container');
-const scoreElement = document.getElementById('score-container');
-
-// 新增：开始界面和按钮的DOM元素
-const startScreen = document.getElementById('start-screen');
-const startButton = document.getElementById('start-button');
-const languageContainer = document.getElementById('language-container');
-
-// 动态加载语言数据
-async function loadLanguages() {
+export const loadLanguage = async () => {
     try {
-        const response = await fetch('languages.json');
-        languages = await response.json();
-    } catch (error) {
-        console.error('加载语言数据时出错:', error);
-    }
-}
+        const questionContainer = document.getElementById('question-container');
+        const inputField = document.getElementById('country-input');
+        const resultDisplay = document.getElementById('result-display');
+        const submitButton = document.getElementById('submit-button');
+        const skipButton = document.getElementById('skip-button');
+        const datalistElement = document.getElementById('country-suggestions');
 
-function generateQuestion() {
-    currentQuestionIndex = Math.floor(Math.random() * languages.length);
-    const correctLanguage = languages[currentQuestionIndex];
-
-    const sentence =
-        correctLanguage.options[
-            Math.floor(Math.random() * correctLanguage.options.length)
-        ];
-    questionElement.textContent = `“${sentence}”`;
-
-    let options = [correctLanguage];
-    while (options.length < 4) {
-        const randomLanguage =
-            languages[Math.floor(Math.random() * languages.length)];
-        if (!options.includes(randomLanguage)) {
-            options.push(randomLanguage);
+        // 确保所有需要的DOM元素都存在
+        if (
+            !questionContainer ||
+            !inputField ||
+            !resultDisplay ||
+            !submitButton ||
+            !skipButton ||
+            !datalistElement
+        ) {
+            console.error('无法找到某些必要的元素');
+            return;
         }
+
+        // 获取语言选项
+        const response = await fetch('./languages.json');
+        if (!response.ok) {
+            throw new Error('网络响应失败');
+        }
+
+        const languagesData = await response.json();
+
+        // 生成 datalist 选项
+        datalistElement.innerHTML = languagesData
+            .map((language) => {
+                const languageNameZH = language.chineseName; // 中文名
+                const languageNameEN = language.name; // 英文名
+                return `<option value="${languageNameZH} ${languageNameEN}">${languageNameZH} ${languageNameEN}</option>`;
+            })
+            .join('');
+
+        // 随机选择一种语言
+        const randomLanguage =
+            languagesData[Math.floor(Math.random() * languagesData.length)];
+
+        // 检查是否存在 options 属性，并且是数组
+        if (!randomLanguage.options || !Array.isArray(randomLanguage.options)) {
+            throw new Error('语言数据格式无效');
+        }
+
+        // 从选定的语言中随机选择一个句子
+        const randomSentence =
+            randomLanguage.options[
+                Math.floor(Math.random() * randomLanguage.options.length)
+            ];
+
+        // 显示问题
+        questionContainer.innerHTML = `<h2>${randomSentence}</h2>`;
+
+        // 清空输入框
+        inputField.value = '';
+        resultDisplay.innerHTML = ''; // 清空结果显示区域
+
+        // 移除旧的点击事件监听器，避免多次绑定
+        submitButton.replaceWith(submitButton.cloneNode(true));
+        skipButton.replaceWith(skipButton.cloneNode(true));
+
+        // 提交答案的逻辑
+        document
+            .getElementById('submit-button')
+            .addEventListener('click', () => {
+                const userAnswer = inputField.value.trim().toLowerCase();
+                const correctAnswer = randomLanguage.name.toLowerCase(); // 获取正确答案（语言名）
+
+                if (
+                    userAnswer.includes(correctAnswer) ||
+                    userAnswer.includes(
+                        randomLanguage.chineseName.toLowerCase()
+                    )
+                ) {
+                    resultDisplay.style.color = 'green';
+                    resultDisplay.innerHTML = '正确!';
+
+                    setTimeout(() => {
+                        loadLanguage(); // 2秒后加载下一个问题
+                    }, 2000);
+                } else {
+                    resultDisplay.style.color = 'red';
+                    resultDisplay.innerHTML = `错误! 正确答案是: ${randomLanguage.chineseName} (${correctAnswer})`;
+
+                    // 答错后2秒后切换到下一题
+                    setTimeout(() => {
+                        loadLanguage();
+                    }, 2000);
+                }
+            });
+
+        // 跳过按钮的逻辑
+        document.getElementById('skip-button').addEventListener('click', () => {
+            loadLanguage(); // 立即加载下一个问题
+        });
+    } catch (error) {
+        console.error('加载语言数据失败:', error);
+        alert('加载语言数据失败: ' + error.message);
+    }
+};
+
+// 游戏初始化及事件监听
+window.addEventListener('load', () => {
+    const startButton = document.getElementById('start-button');
+    const startScreen = document.getElementById('start-screen');
+    const gameScreen = document.getElementById('game-screen');
+    const backButton = document.getElementById('back-button');
+
+    // 确保这些元素存在
+    if (!startButton || !startScreen || !gameScreen || !backButton) {
+        console.error('无法找到某些必要的元素');
+        return;
     }
 
-    options = shuffleArray(options);
-
-    optionsContainer.innerHTML = options
-        .map(
-            (option) =>
-                `<button class="option-button">${option.chineseName}<br>${option.name}</button>`
-        )
-        .join('');
-
-    const optionButtons = document.querySelectorAll('.option-button');
-    optionButtons.forEach((button, index) => {
-        button.style.backgroundColor = ''; // 清除按钮背景色
-        button.addEventListener('click', () =>
-            checkAnswer(options[index], button)
-        );
+    startButton.addEventListener('click', () => {
+        startScreen.style.display = 'none';
+        gameScreen.style.display = 'block';
+        resetScore();
+        loadLanguage();
     });
-}
 
-function checkAnswer(selectedOption, button) {
-    const correctAnswer = languages[currentQuestionIndex];
-
-    if (selectedOption.name === correctAnswer.name) {
-        // 用户选择正确答案，按钮变为绿色
-        button.style.backgroundColor = 'green';
-        score++;
-        incrementScore();
-
-        // 2秒后自动生成下一题
-        setTimeout(() => {
-            generateQuestion();
-        }, 2000);
-    } else {
-        // 用户选择错误答案，按钮变为红色
-        button.style.backgroundColor = 'red';
-
-        // 等待用户选择正确答案，不切换问题
-        setTimeout(() => {
-            button.style.backgroundColor = ''; // 2秒后重置颜色
-        }, 2000);
-    }
-
-    updateScore();
-}
-
-function updateScore() {
-    scoreElement.textContent = `Score: ${score}`;
-}
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-function init() {
-    resetScore();
-    score = 0;
-    updateScore();
-    generateQuestion();
-}
-
-// 新增：开始游戏函数，显示游戏界面并初始化游戏
-function startGame() {
-    startScreen.style.display = 'none';
-    languageContainer.style.display = 'block';
-    init();
-}
-
-// 新增：返回到开始界面并重置游戏
-function returnToStartScreen() {
-    languageContainer.style.display = 'none';
-    startScreen.style.display = 'block';
-    resetScore(); // 重置分数
-    score = 0; // 确保分数归零
-    updateScore(); // 更新分数显示
-}
-
-// 给“开始游戏”按钮绑定点击事件
-startButton.addEventListener('click', startGame);
-
-// 新增：给返回按钮绑定点击事件
-const backButton = document.getElementById('back-button');
-backButton.addEventListener('click', returnToStartScreen);
-
-// 加载语言数据
-window.onload = loadLanguages;
+    backButton.addEventListener('click', () => {
+        gameScreen.style.display = 'none';
+        startScreen.style.display = 'block';
+        resetScore();
+    });
+});

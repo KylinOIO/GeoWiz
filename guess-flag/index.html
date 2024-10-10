@@ -4,11 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>猜国旗</title>
-        <!-- 引入通用的CSS样式文件 -->
         <link rel="stylesheet" href="../style.css" />
     </head>
     <body>
-        <!-- 新增 logo 的代码开始 -->
         <div id="logo-container">
             <a href="../index.html">
                 <img
@@ -18,12 +16,8 @@
                 />
             </a>
         </div>
-        <!-- 新增 logo 的代码结束 -->
 
-        <!-- 主应用容器 -->
         <div id="app">
-            <!-- 添加开始界面 -->
-            <!-- 添加在开始界面的返回按钮 -->
             <div id="start-screen">
                 <a href="../index.html" id="back-button-start-screen">
                     <button>返回</button>
@@ -31,7 +25,6 @@
 
                 <h1>猜国旗模式</h1>
 
-                <!-- 模式选择部分 -->
                 <div id="mode-selection">
                     <label>
                         <input
@@ -51,9 +44,9 @@
                         GeoGuessr/图寻模式
                         <span class="tooltip-container">
                             <span class="tooltip">?</span>
-                            <span class="tooltip-text"
-                                >仅包含谷歌官方街景覆盖的国家和地区</span
-                            >
+                            <span class="tooltip-text">
+                                仅包含谷歌官方街景覆盖的国家和地区
+                            </span>
                         </span>
                     </label>
                 </div>
@@ -61,19 +54,22 @@
                 <button id="start-button">开始游戏</button>
             </div>
 
-            <!-- 游戏界面 -->
             <div id="game-screen" style="display: none">
                 <div id="flag-domain-container">
-                    <!-- 国旗容器，显示需要猜的国旗图片 -->
                     <div id="flag-container"></div>
-
-                    <!-- 选项容器，显示可能的国家选项 -->
-                    <div id="options-container"></div>
-
-                    <!-- 分数容器，显示当前得分 -->
+                    <div id="answer-display" style="display: none"></div>
+                    <div id="input-container">
+                        <input
+                            type="text"
+                            id="country-input"
+                            placeholder="请输入国家名称"
+                            list="country-suggestions"
+                        />
+                        <datalist id="country-suggestions"></datalist>
+                        <button id="submit-button">提交答案</button>
+                        <button id="skip-button">跳过</button>
+                    </div>
                     <div id="score-container">Score: 0</div>
-
-                    <!-- 返回按钮，返回到模式选择页面 -->
                     <a href="index.html">
                         <button id="back-button">返回</button>
                     </a>
@@ -81,7 +77,6 @@
             </div>
         </div>
 
-        <!-- 引入猜国旗模式的JS逻辑文件 -->
         <script type="module" src="guess-flag.js"></script>
     </body>
 </html>

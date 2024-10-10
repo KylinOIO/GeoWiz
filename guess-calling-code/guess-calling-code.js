@@ -4,8 +4,14 @@ let countryCodes = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-const questionElement = document.getElementById('question');
-const optionsContainer = document.getElementById('options-container');
+const callingCodeQuestionContainer = document.getElementById(
+    'calling-code-question-container'
+);
+const answerDisplay = document.getElementById('answer-display');
+const countryInput = document.getElementById('country-input');
+const suggestionsList = document.getElementById('country-suggestions');
+const submitButton = document.getElementById('submit-button');
+const skipButton = document.getElementById('skip-button');
 const scoreElement = document.getElementById('score-container');
 const startScreen = document.getElementById('start-screen');
 const startButton = document.getElementById('start-button');
@@ -23,88 +29,65 @@ async function loadCountryCodes() {
         startButton.disabled = false; // 加载完数据后启用开始按钮
     } catch (error) {
         console.error('加载电话区号数据时出错:', error);
-        questionElement.textContent = '加载数据失败，请稍后再试。';
+        callingCodeQuestionContainer.textContent = '加载数据失败，请稍后再试。';
     }
 }
-
-window.addEventListener('DOMContentLoaded', async () => {
-    startButton.disabled = true; // 禁用开始按钮直到数据加载完成
-    await loadCountryCodes(); // 等待数据加载完成
-});
 
 function generateQuestion() {
     if (countryCodes.length === 0) return; // 确保数据加载完成
     currentQuestionIndex = Math.floor(Math.random() * countryCodes.length);
     const correctCode = countryCodes[currentQuestionIndex];
 
-    questionElement.textContent = `哪个国家的电话区号是 “${correctCode.code}”？`;
+    callingCodeQuestionContainer.textContent = `.${correctCode.code}`;
 
-    let options = [correctCode];
-    while (options.length < 4) {
-        const randomCode =
-            countryCodes[Math.floor(Math.random() * countryCodes.length)];
-        if (
-            !options.some(
-                (option) => option.countryName === randomCode.countryName
-            )
-        ) {
-            options.push(randomCode);
-        }
-    }
+    countryInput.value = '';
+    suggestionsList.innerHTML = '';
+    answerDisplay.textContent = ''; // 清空上次答案
 
-    options = shuffleArray(options);
-
-    optionsContainer.innerHTML = options
-        .map(
-            (option) =>
-                `<button class="option-button">${option.countryName}</button>`
-        )
-        .join('');
-
-    // 重置所有按钮样式
-    document.querySelectorAll('.option-button').forEach((button) => {
-        button.style.backgroundColor = ''; // 清除按钮背景色
-        button.addEventListener('click', (e) =>
-            checkAnswer(e.target.textContent)
-        );
-    });
+    countryInput.addEventListener('input', updateSuggestions);
 }
 
-function checkAnswer(selectedOption) {
-    const correctAnswer = countryCodes[currentQuestionIndex];
-    const buttons = document.querySelectorAll('.option-button');
+function updateSuggestions() {
+    const inputVal = countryInput.value.toLowerCase();
+    suggestionsList.innerHTML = '';
 
-    buttons.forEach((button) => {
-        if (button.textContent === selectedOption) {
-            if (selectedOption === correctAnswer.countryName) {
-                // 正确答案，变为绿色
-                button.style.backgroundColor = 'green';
-                score++;
-                updateScore();
-                setTimeout(() => {
-                    generateQuestion(); // 2秒后生成新问题
-                }, 2000);
-            } else {
-                // 错误答案，变为红色
-                button.style.backgroundColor = 'red';
-                setTimeout(() => {
-                    button.style.backgroundColor = ''; // 重置按钮颜色
-                }, 2000); // 2秒后恢复颜色，继续等待用户选择正确答案
-            }
-        }
-    });
+    if (inputVal) {
+        const matchingCountries = countryCodes.filter(({ countryName }) =>
+            countryName.toLowerCase().includes(inputVal)
+        );
+
+        matchingCountries.forEach(({ countryName }) => {
+            const option = document.createElement('option');
+            option.value = countryName;
+            suggestionsList.appendChild(option);
+        });
+    }
+}
+
+function checkAnswer() {
+    const selectedOption = countryInput.value.trim();
+    const correctAnswer = countryCodes[currentQuestionIndex];
+
+    if (selectedOption === correctAnswer.countryName) {
+        countryInput.style.backgroundColor = 'green';
+        score++;
+        updateScore();
+        setTimeout(() => {
+            generateQuestion(); // 2秒后生成新问题
+            countryInput.style.backgroundColor = ''; // 重置输入框背景色
+        }, 2000);
+    } else {
+        countryInput.style.backgroundColor = 'red';
+        answerDisplay.textContent = `错误！正确答案是：${correctAnswer.countryName}`; // 显示正确答案
+        setTimeout(() => {
+            countryInput.style.backgroundColor = ''; // 重置输入框背景色
+            generateQuestion(); // 显示答案后再生成下一个问题
+        }, 2000);
+    }
 }
 
 function updateScore() {
     scoreElement.textContent = `Score: ${score}`;
-}
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
 }
 
 function init() {
@@ -114,7 +97,7 @@ function init() {
 
 function startGame() {
     startScreen.style.display = 'none'; // 隐藏启动界面
-    document.getElementById('game-screen').style.display = 'block'; // 确保游戏界面显示
+    document.getElementById('game-screen').style.display = 'block'; // 显示游戏界面
     callingCodeContainer.style.display = 'flex'; // 确保内容显示
     init();
     generateQuestion(); // 启动时生成第一个问题
@@ -125,14 +108,17 @@ function returnToStartScreen() {
     startScreen.style.display = 'flex'; // 显示启动界面
     score = 0;
     updateScore();
-    questionElement.textContent = '';
-    optionsContainer.innerHTML = '';
+    callingCodeQuestionContainer.textContent = '';
+    answerDisplay.textContent = '';
 }
 
 startButton.addEventListener('click', startGame);
 document
     .getElementById('back-button')
     .addEventListener('click', returnToStartScreen);
+
+submitButton.addEventListener('click', checkAnswer);
+skipButton.addEventListener('click', generateQuestion);
 
 window.addEventListener('DOMContentLoaded', async () => {
     await loadCountryCodes(); // 等待数据加载完成

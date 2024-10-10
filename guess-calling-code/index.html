@@ -54,11 +54,32 @@
                 <button id="start-button">开始游戏</button>
             </div>
 
+            <!-- 游戏屏幕部分 -->
             <div id="game-screen" style="display: none">
                 <div id="calling-code-container">
-                    <div id="question"></div>
-                    <div id="options-container"></div>
+                    <!-- 顶级域名展示区 -->
+                    <div id="calling-code-question-container"></div>
+
+                    <!-- 答案展示区，显示是否正确 -->
+                    <div id="answer-display"></div>
+
+                    <!-- 输入和跳过按钮部分 -->
+                    <div id="input-container">
+                        <input
+                            type="text"
+                            id="country-input"
+                            placeholder="请输入国家名称"
+                            list="country-suggestions"
+                        />
+                        <datalist id="country-suggestions"></datalist>
+                        <button id="submit-button">提交答案</button>
+                        <button id="skip-button">跳过</button>
+                    </div>
+
+                    <!-- 分数展示 -->
                     <div id="score-container">Score: 0</div>
+
+                    <!-- 返回按钮 -->
                     <a href="../index.html">
                         <button id="back-button">返回</button>
                     </a>
